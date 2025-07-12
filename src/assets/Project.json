@@ -5,7 +5,13 @@
     "description": "Modern responsive website with interactive features",
     "image": "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
     "tags": ["React", "Tailwind", "API"],
-    "badge": "HOT"
+    "badge": "HOT",
+    "backTitle": "Detailed Overview",
+    "backContent": [
+      "First paragraph of detailed description",
+      "Second paragraph with more technical details",
+      "Third paragraph about challenges faced"
+    ]
   },
   {
     "id": "project-2",
@@ -13,29 +19,40 @@
     "description": "Cross-platform application for iOS and Android",
     "image": "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
     "tags": ["Flutter", "Firebase", "UX"],
-    "badge": "POPULAR"
-  }, {
+    "badge": "POPULAR",
+    "backTitle": "Detailed Overview",
+    "backContent": [
+      "First paragraph of detailed description",
+      "Second paragraph with more technical details",
+      "Third paragraph about challenges faced"
+    ],
+    "backTags": ["Frontend", "Backend", "API"]
+  },
+  {
     "id": "project-3",
     "title": "Mobile App",
     "description": "Cross-platform application for iOS and Android",
     "image": "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
     "tags": ["Flutter", "Firebase", "UX"],
     "badge": "POPULAR"
-  } ,{
+  },
+  {
     "id": "project-4",
     "title": "Mobile App",
     "description": "Cross-platform application for iOS and Android",
     "image": "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
     "tags": ["Flutter", "Firebase", "UX"],
     "badge": "POPULAR"
-  } ,{
+  },
+  {
     "id": "project-5",
     "title": "Mobile App",
     "description": "Cross-platform application for iOS and Android",
     "image": "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
     "tags": ["Flutter", "Firebase", "UX"],
     "badge": "POPULAR"
-  }, {
+  },
+  {
     "id": "project-6",
     "title": "Mobile App",
     "description": "Cross-platform application for iOS and Android",

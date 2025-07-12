@@ -1,61 +1,98 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { skills } from "../skills.js";
 import "../Sass/skill.scss";
 
-const shuffleArray = (arr) => {
-  return [...arr, ...arr]
-    .map((item) => ({ ...item, id: Math.random() }))
-    .sort(() => 0.5 - Math.random());
-};
-
 const SkillGame = () => {
-  const [cards, setCards] = useState([]);
+  const [cards] = useState([...skills, ...skills].map((skill, index) => ({
+    ...skill,
+    id: index
+  })));
   const [flipped, setFlipped] = useState([]);
   const [matched, setMatched] = useState([]);
+  const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
+  const animationRef = useRef(null);
+  const lastScrollY = useRef(0);
 
+  // Scroll direction detection
   useEffect(() => {
-    setCards(shuffleArray(skills));
-  }, []);
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const direction = currentScrollY > lastScrollY.current ? 'down' : 'up';
+      lastScrollY.current = currentScrollY;
 
-  useEffect(() => {
-    const handleMouseLeave = (e) => {
-      if (sectionRef.current && !sectionRef.current.contains(e.relatedTarget)) {
-        setFlipped([]);
-      }
+      if (!sectionRef.current) return;
+      
+      const rect = sectionRef.current.getBoundingClientRect();
+      const triggerHeight = window.innerHeight * 0.7;
+      const releaseHeight = window.innerHeight * 0.3;
+      
+      // More sensitive trigger when scrolling down
+      const triggerPoint = direction === 'down' ? triggerHeight : releaseHeight;
+      
+      const isInView = (
+        rect.top <= triggerPoint &&
+        rect.bottom >= releaseHeight
+      );
+      
+      setIsVisible(isInView);
     };
 
-    const node = sectionRef.current;
-    if (node) {
-      node.addEventListener("mouseleave", handleMouseLeave);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Initial check
+    
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Handle reveal animation
+  useEffect(() => {
+    if (isVisible) {
+      // Cancel any pending animation
+      if (animationRef.current) {
+        clearTimeout(animationRef.current);
+      }
+      
+      // Show all cards
+      setFlipped(cards.map(card => card.id));
+      
+      // Set timeout to hide cards
+      animationRef.current = setTimeout(() => {
+        setFlipped([]);
+      }, 3000);
+    } else {
+      // Immediately hide cards when not visible
+      setFlipped([]);
     }
 
     return () => {
-      if (node) {
-        node.removeEventListener("mouseleave", handleMouseLeave);
+      if (animationRef.current) {
+        clearTimeout(animationRef.current);
       }
     };
-  }, []);
+  }, [isVisible, cards]);
 
-  const handleFlip = (card) => {
-    if (
-      flipped.length === 2 ||
-      flipped.some((f) => f.id === card.id) ||
-      matched.includes(card.name)
-    ) {
-      return;
-    }
+  const handleFlip = (id) => {
+    // Don't allow flips during reveal or with matched cards
+    if (flipped.length === cards.length || matched.includes(id)) return;
+    
+    // Don't allow flipping already flipped cards
+    if (flipped.includes(id)) return;
+    
+    // Only allow 2 cards to be flipped at once
+    if (flipped.length >= 2) return;
 
-    const newFlipped = [...flipped, card];
+    const newFlipped = [...flipped, id];
     setFlipped(newFlipped);
 
+    // Check for match if two cards are flipped
     if (newFlipped.length === 2) {
-      if (newFlipped[0].name === newFlipped[1].name) {
-        setMatched((prev) => [...prev, card.name]);
-        setFlipped([]);
-      } else {
-        setTimeout(() => setFlipped([]), 1000);
+      const [firstId, secondId] = newFlipped;
+      if (cards[firstId].name === cards[secondId].name) {
+        setMatched(prev => [...prev, firstId, secondId]);
       }
+      setTimeout(() => {
+        setFlipped(prev => prev.filter(id => matched.includes(id)));
+      }, 1000);
     }
   };
 
@@ -63,27 +100,23 @@ const SkillGame = () => {
     <section id="Skills" className="skill-section" ref={sectionRef}>
       <h2 className="section-title">Skill Matching Game</h2>
       <div className="skill-game">
-        {cards.map((card) => {
-          const isFlipped =
-            flipped.some((f) => f.id === card.id) ||
-            matched.includes(card.name);
-
-          return (
-            <div
-              key={card.id}
-              className={`skill-card ${isFlipped ? "flipped" : ""}`}
-              onClick={() => handleFlip(card)}
-            >
-              <div className="card-inner">
-                <div className="card-front" />
-                <div className="card-back">
-                  <img src={card.icon} alt={card.name} className="skill-icon" />
-                  <p className="skill-name text-capitalize">{card.name}</p>
-                </div>
+        {cards.map((card) => (
+          <div
+            key={card.id}
+            className={`skill-card ${
+              flipped.includes(card.id) || matched.includes(card.id) ? "flipped" : ""
+            }`}
+            onClick={() => handleFlip(card.id)}
+          >
+            <div className="card-inner">
+              <div className="card-front" />
+              <div className="card-back">
+                <img src={card.icon} alt={card.name} className="skill-icon" />
+                <p className="skill-name">{card.name}</p>
               </div>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
     </section>
   );

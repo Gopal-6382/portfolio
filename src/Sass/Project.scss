@@ -4,8 +4,7 @@ $clr--1: #1d9ee8;
 .projects-section {
   min-height: 60rem;
   padding: 2rem 0;
-  margin-left: 3%;
-  margin-right: 3%;
+  margin: 0 3%;
 }
 
 .project-card {
@@ -16,41 +15,51 @@ $clr--1: #1d9ee8;
   border-radius: 0.5rem;
   background-color: #fff;
   overflow: hidden;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.9);
-  transition: all 0.3s ease;
-  opacity: 0;
   position: relative;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.9);
+  transition: transform 0.4s ease, opacity 0.3s ease, box-shadow 0.3s ease;
   transform-style: preserve-3d;
   perspective: 1000px;
-  
+  opacity: 0;
+
   &.animate-in {
     opacity: 1;
   }
 
   &.flicker-active {
-    animation: periodic-flicker 4s ease-in-out forwards;
+    animation: periodic-flicker 2s ease-in-out backwards;
   }
 
   &:hover {
-    transform: translateY(-0.5rem) scale(1.02);
+    transform: rotateY(180deg) translateY(-0.5rem) scale(1.02);
     box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.9);
+
+    .project-front {
+      transform: rotateY(180deg);
+    }
+    .project-back {
+      transform: rotateY(0deg);
+    }
   }
 
   .project-front,
-  .project-back {
-    backface-visibility: hidden;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s ease;
-  }
-
   .project-back {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.6s ease;
+  }
+
+  .project-front {
+    position: relative;
+    background-color: #fff;
+    z-index: 2;
+  }
+
+  .project-back {
     background-color: #f8f9fa;
     transform: rotateY(180deg);
     padding: 1.5rem;
@@ -59,25 +68,32 @@ $clr--1: #1d9ee8;
     justify-content: center;
     align-items: center;
     text-align: center;
-    
+
+    // Fix mirrored content (apply only to text containers)
+    .back-content,
+    h3,
+    .back-tags {
+      transform: rotateY(180deg);
+    }
+
     h3 {
       margin-bottom: 1rem;
       color: #333;
     }
-    
+
     .back-content {
       font-size: 0.9rem;
       line-height: 1.6;
       color: #555;
       margin-bottom: 1.5rem;
     }
-    
+
     .back-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
       justify-content: center;
-      
+
       span {
         background: #e9ecef;
         padding: 0.25rem 0.5rem;
@@ -85,15 +101,6 @@ $clr--1: #1d9ee8;
         font-size: 0.75rem;
         color: #495057;
       }
-    }
-  }
-
-  &.flipped {
-    .project-front {
-      transform: rotateY(180deg);
-    }
-    .project-back {
-      transform: rotateY(0deg);
     }
   }
 
@@ -149,84 +156,41 @@ $clr--1: #1d9ee8;
       }
     }
   }
-  
-  .btn {
-    padding: 0.3rem 0.5rem;
-    background-color: $clr--1 !important;
-    cursor: pointer;
-  }
-  
+
   .action-buttons {
     display: flex;
     justify-content: space-between;
     gap: 0.5rem;
-    padding: 1rem;
-    padding-bottom: 2rem;
-    
+    padding: 1rem 1rem 2rem;
+
     button {
+      padding: 0.3rem 0.5rem;
+      background-color: $clr--1 !important;
+      cursor: pointer;
       transition: all 0.2s ease;
       z-index: 10;
 
       &:hover {
         transform: translateY(-2px);
       }
-    }
-    
-    .flip-btn {
-      background-color: #6c757d !important;
+
+      &.flip-btn {
+        background-color: #6c757d !important;
+      }
     }
   }
 }
 
+// Responsive fix
 @media (max-width: 350px) {
   .project-card {
     .project-image {
       height: 230px;
     }
   }
+
   .btn {
     width: 8rem;
     height: 4rem;
   }
-}
-// ... (keep all your existing styles)
-
-.project-card {
-  // ... (existing styles)
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.6s ease, opacity 0.3s ease, box-shadow 0.3s ease;
-  perspective: 1000px;
-  
-  &.flipped {
-    transform: rotateY(180deg);
-  }
-
-  .project-front,
-  .project-back {
-    backface-visibility: hidden;
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-
-  .project-back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #f8f9fa;
-    transform: rotateY(180deg);
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    
-    // ... (rest of your back styles)
-  }
-  
-  // ... (rest of your existing styles)
 }
