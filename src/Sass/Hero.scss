@@ -1,0 +1,142 @@
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@import "./rotate.scss";
+
+$clr--1: #1d9ee8;
+
+.star-2 {
+  height: 25%;
+  margin-top: 5%;
+  @include text-focus-animation(1s, ease, 0.6s, infinite);
+}
+
+.bulb {
+  position: absolute;
+  top: 15%;
+  left: 3%;
+  width: 15%;
+  max-width: 80px;
+  z-index: 2;
+}
+
+.hero-star {
+  position: absolute;
+  top: 30rem;
+  left: 28rem;
+  width: 23%;
+  transform: translate(-50%, -50%);
+  max-width: 150px;
+  z-index: 1;
+  @include text-focus-animation(1s, ease, 0.6s, infinite);
+}
+
+.hero-arrow {
+  position: absolute;
+  top: -4rem;
+  left: -3rem;
+  width: 20vw;
+  max-width: 200px;
+  @include text-focus-animation(1s, ease, 0s, infinite);
+}
+@keyframes blink-animation {
+  50% {
+    opacity: 0;
+  }
+}
+.ic-main {
+  animation: rotate-animation 2s ease-out;
+  animation: blink-animation 1s ease-out infinite;
+}
+.t-hero {
+  padding-top: 6%;
+  animation: blink-animation 5s ease-out infinite;
+}
+
+.btn {
+  background-color: $clr--1 !important;
+  border: 3px solid black !important;
+  padding: 0.5rem 1.5rem !important;
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .hero-star {
+    top: 25rem;
+    left: 24rem;
+  }
+  .hero-arrow {
+    top: -5rem;
+    width: 50vw;
+  }
+  .section-2 {
+    margin-top: 10rem;
+  }
+}
+
+@media (min-width: 777px) and (max-width: 992px) {
+  .hero-star {
+    top: 23rem;
+    left: 22.5rem;
+  }
+
+  img,
+  svg {
+    max-width: 125%;
+    height: auto;
+    display: block;
+  }
+}
+@media (min-width: 768px) and (max-width: 776px) {
+  .board {
+    margin-top: 5rem !important;
+  }
+  .hero-star {
+    top: 18rem;
+    left: 18rem;
+  }
+}
+@media (min-width: 541px) and (max-width: 767px) {
+  .hero-star {
+    top: 28rem;
+    left: 27rem;
+  }
+  .bulb {
+    top: 25%;
+    left: 4%;
+  }
+  .hero-arrow {
+    top: -5rem;
+    left: 1rem;
+    width: 50vw;
+  }
+  .star-2 {
+    height: 15%;
+    margin-top: 8%;
+    @include text-focus-animation(1s, ease, 0.6s, infinite);
+  }
+}
+
+@media (min-width: 3px) and (max-width: 540px) {
+  .hero-arrow {
+    top: -5rem;
+    left: 1rem;
+    width: 50vw;
+  }
+  .hero-star {
+    position: absolute;
+    height: 16%;
+    top: 84%;
+    transform: translateY(-60%); // Upward shift visually same across sizes
+    left: 69%;
+  }
+
+  .bulb {
+    top: 25%;
+    width: 15%;
+    left: 5%;
+  }
+}

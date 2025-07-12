@@ -1,0 +1,27 @@
+li {
+  width: 2rem;
+  height: 1rem;
+  margin-bottom: 1%;
+}
+.row ul {
+  list-style-type: none;
+}
+
+.section-6 {
+  .row {
+    margin-right: 5%;
+  }
+}
+.beder{
+  border-top: 3px solid rgb(246, 231, 144);
+}
+@media (min-width: 300px) and (max-width: 768px) {
+  .section-6 {
+    .row {
+      margin-right: 0;
+    }
+    li {
+      width: 1.5rem;
+    }
+  }
+}

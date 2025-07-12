@@ -1,0 +1,28 @@
+/* Apply box-sizing to all elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Reset and layout for html and body */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background-color: #f6f9d4 !important;
+}
+
+/* Image default styling */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+

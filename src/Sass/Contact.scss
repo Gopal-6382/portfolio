@@ -1,0 +1,162 @@
+$clr--1: #1d9ee8;
+
+.contact-form-section {
+  h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    input,
+    textarea {
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid #ccc;
+      outline: none;
+      transition: border 0.2s ease;
+
+      &:focus {
+        border-color: #007bff;
+      }
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      background: $clr--1;
+      color: white;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      border: 2px solid black;
+      border-radius: 50px;
+
+      &:hover {
+        background: #0056b3;
+      }
+
+      &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+    }
+
+    .success-msg,
+    .error-msg {
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .success-msg {
+      color: green;
+    }
+
+    .error-msg {
+      color: red;
+    }
+  }
+
+  .lottie {
+    margin-top: -12%;
+    margin-left: 15%;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .lottie {
+    margin-top: -5% !important;
+    margin-left: 15% !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.2px) {
+  .lottie {
+    margin-top: 10% !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.8px) {
+  .lottie {
+    margin-top: 5rem !important;
+    margin-left: 3rem !important;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 767.8px) {
+  .lottie {
+    margin-top: -33rem !important;
+    position: static !important;
+    margin-left: 1rem !important;
+  }
+  .contact {
+    z-index: 1 !important;
+    opacity: 0.6;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 767.8px) {
+  /* Lottie Animation Position Fix */
+  .lottie {
+    margin-top: -130% !important;
+    margin-left: 0 !important;
+    position: static !important;
+    z-index: 0 !important;
+    pointer-events: none; /* Ensure it doesn't block inputs */
+  }
+
+  /* Contact Form Container */
+  .contact {
+    position: relative;
+    z-index: 1;
+    background-color: transparent !important;
+  }
+
+  /* Form Inputs, Textareas, Selects */
+  .contact input,
+  .contact textarea,
+  .contact select {
+    background-color: transparent !important; /* transparent background */
+    color: $clr--1 !important;
+    font-weight: 900 !important; /* visible text */
+    border: 1px solid rgba(0, 0, 0, 0.3); /* subtle border */
+    z-index: 2;
+    position: relative;
+  }
+
+  /* Placeholder Styling */
+  .contact input::placeholder,
+  .contact textarea::placeholder {
+    color: black !important;
+    font-weight: bold !important;
+  }
+
+  /* Chrome Autofill Fix */
+  .contact input:-webkit-autofill,
+  .contact textarea:-webkit-autofill,
+  .contact select:-webkit-autofill {
+    background-color: transparent !important;
+    -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+    -webkit-text-fill-color: $clr--1 !important;
+    font-weight: bold !important;
+    transition: background-color 9999s ease-in-out 0s; /* prevents yellow bg flash */
+  }
+
+  /* Optional: Make section background transparent */
+}
+@media (min-width: 300px) and (max-width: 536px) {
+  .lottie {
+    margin-top: -30rem !important;
+    pointer-events: none; /* Ensure it doesn't block inputs */
+  }
+}

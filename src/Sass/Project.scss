@@ -1,0 +1,232 @@
+@import "./rotate.scss";
+$clr--1: #1d9ee8;
+
+.projects-section {
+  min-height: 60rem;
+  padding: 2rem 0;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 3px solid black;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.9);
+  transition: all 0.3s ease;
+  opacity: 0;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  
+  &.animate-in {
+    opacity: 1;
+  }
+
+  &.flicker-active {
+    animation: periodic-flicker 4s ease-in-out forwards;
+  }
+
+  &:hover {
+    transform: translateY(-0.5rem) scale(1.02);
+    box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.9);
+  }
+
+  .project-front,
+  .project-back {
+    backface-visibility: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease;
+  }
+
+  .project-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f8f9fa;
+    transform: rotateY(180deg);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    h3 {
+      margin-bottom: 1rem;
+      color: #333;
+    }
+    
+    .back-content {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+    
+    .back-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      
+      span {
+        background: #e9ecef;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        font-size: 0.75rem;
+        color: #495057;
+      }
+    }
+  }
+
+  &.flipped {
+    .project-front {
+      transform: rotateY(180deg);
+    }
+    .project-back {
+      transform: rotateY(0deg);
+    }
+  }
+
+  .project-image {
+    height: 300px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+  }
+
+  .project-body {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      .badge {
+        background: #ff5722;
+        color: white;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        font-size: 0.75rem;
+      }
+    }
+
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: auto;
+
+      span {
+        background: #f0f0f0;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        font-size: 0.75rem;
+      }
+    }
+  }
+  
+  .btn {
+    padding: 0.3rem 0.5rem;
+    background-color: $clr--1 !important;
+    cursor: pointer;
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    
+    button {
+      transition: all 0.2s ease;
+      z-index: 10;
+
+      &:hover {
+        transform: translateY(-2px);
+      }
+    }
+    
+    .flip-btn {
+      background-color: #6c757d !important;
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .project-card {
+    .project-image {
+      height: 230px;
+    }
+  }
+  .btn {
+    width: 8rem;
+    height: 4rem;
+  }
+}
+// ... (keep all your existing styles)
+
+.project-card {
+  // ... (existing styles)
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+  perspective: 1000px;
+  
+  &.flipped {
+    transform: rotateY(180deg);
+  }
+
+  .project-front,
+  .project-back {
+    backface-visibility: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .project-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f8f9fa;
+    transform: rotateY(180deg);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    // ... (rest of your back styles)
+  }
+  
+  // ... (rest of your existing styles)
+}
