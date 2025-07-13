@@ -12,7 +12,7 @@ $clr--1: #1d9ee8;
 .star-2 {
   height: 25%;
   margin-top: 5%;
-  @include text-focus-animation(1s, ease, 0.6s, infinite);
+  @include text-focus-animation(2s, ease-out, 0s, infinite);
 }
 
 .bulb {
@@ -32,7 +32,7 @@ $clr--1: #1d9ee8;
   transform: translate(-50%, -50%);
   max-width: 150px;
   z-index: 1;
-  @include text-focus-animation(1s, ease, 0.6s, infinite);
+  @include text-focus-animation(1s, ease, 0s, infinite);
 }
 
 .hero-arrow {
@@ -48,13 +48,96 @@ $clr--1: #1d9ee8;
     opacity: 0;
   }
 }
-.ic-main {
-  animation: rotate-animation 2s ease-out;
-  animation: blink-animation 1s ease-out infinite;
+.tech-stack {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 1rem 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+}
+.modal-footer{
+  background-color: #f6f9d4 !important;
+}
+
+.tech-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: grayscale(30%);
+  transition: all 0.5s ease;
+  animation: icon-rotate 8s infinite linear;
+
+  &:hover {
+    filter: grayscale(0%);
+    animation-play-state: paused;
+    transform: scale(1.2) rotate(360deg);
+  }
+
+  /* Individual rotation delays */
+  &:nth-child(1) {
+    animation-delay: 0s;
+  }
+  &:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+  &:nth-child(3) {
+    animation-delay: 1s;
+  }
+  &:nth-child(4) {
+    animation-delay: 1.5s;
+  }
+}
+
+@keyframes icon-rotate {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(50px) rotate(90deg);
+  }
+  50% {
+    transform: translateX(100px) rotate(180deg);
+  }
+  75% {
+    transform: translateX(50px) rotate(270deg);
+  }
+  100% {
+    transform: translateX(0) rotate(360deg);
+  }
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .tech-icon {
+    animation: icon-rotate-mobile 6s infinite linear;
+    width: 35px;
+    height: 35px;
+  }
+
+  @keyframes icon-rotate-mobile {
+    0% {
+      transform: translateX(0) rotate(0deg);
+    }
+    100% {
+      transform: translateX(100%) rotate(360deg);
+    }
+  }
 }
 .t-hero {
   padding-top: 6%;
-  animation: blink-animation 5s ease-out infinite;
+  // animation: blink-animation 5s ease-out infinite;
 }
 
 .btn {

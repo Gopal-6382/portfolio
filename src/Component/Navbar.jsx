@@ -6,11 +6,11 @@ export const Navbar = () => {
   const [hideNavbar, setHideNavbar] = useState(false);
 
   const navItems = [
-    { id: 1, name: "Home", href: "#" },
-    { id: 2, name: "About", href: "#" },
-    { id: 3, name: "Services", href: "#" },
-    { id: 4, name: "Portfolio", href: "#Skills" },
-    { id: 5, name: "Contact", href: "#" },
+    { id: 1, name: "Home", href: "#section-1" },
+    { id: 2, name: "About", href: "#section-2" },
+    { id: 3, name: "Skill", href: "#section-3" },
+    { id: 4, name: "Projects", href: "#section-4" },
+    { id: 5, name: "Contact", href: "#section-5" },
   ];
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
@@ -32,7 +32,7 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <div className={`section-1 ${hideNavbar ? "hide-on-scroll" : ""}`}>
+    <div id="section-1" className={`section-1 ${hideNavbar ? "hide-on-scroll" : ""}`}>
       <div className="fixed-top mt-4 px-3 px-md-4">
         <div className="container">
           <nav className="navbar navbar-expand-md bg-black bg-opacity-75 rounded-5 px-3">
@@ -52,10 +52,10 @@ export const Navbar = () => {
               </button>
 
               <div className={`collapse navbar-collapse custom-collapse ${menuOpen ? "show" : ""}`} id="navbarContent">
-                <ul className="navbar-nav px-md-5 pb-md-3 justify-content-between align-items-center w-100 fade-in-list">
+                <ul className="navbar-nav  justify-content-between  align-items-center w-100 fade-in-list ">
                   {navItems.map((item, index) => (
                     <li
-                      className={`nav-item fade-in-item ${index === navItems.length - 1 ? "last-nav-item" : ""}`}
+                      className={`nav-item  fade-in-item ${index === navItems.length - 1 ? "last-nav-item" : ""}`}
                       style={{ animationDelay: `${index * 0.1 + 0.2}s` }}
                       key={item.id}
                     >

@@ -3,36 +3,73 @@ import insta from "../assets/insta.svg";
 import linkden from "../assets/linkden.svg";
 import git from "../assets/git.svg";
 import wattsapp from "../assets/wattsapp.svg";
-import icons from "../assets/social.json";
 
-// map string keys in JSON to imported assets
-const imageMap = {
-  insta,
-  linkden,
-  git,
-  wattsapp,
-};
+// Define your social links directly (no JSON needed)
+const socialLinks = [
+  {
+    "name": "GitHub",
+    "src": git,
+    "link":"https://github.com/Gopal-6382" 
+
+  },
+  {
+    "name": "linkden",
+    "src": linkden,
+    "link": "https://linkedin.com/in/gopalkrishnan-dev" 
+
+  },
+  {
+    "name": "WhatsApp",
+    "src": wattsapp,
+    "link": "https://wa.me/+916382972585"
+  },
+  {
+    "name": "Instagram",
+    "src": insta,
+    "link": "https://www.instagram.com/gopal_krishnan_gk"
+  }
+];
 
 export const Footer = () => {
   return (
-    <div className="section-6 beder">
+    <footer className="section-6 beder">
       <div className="container-fluid">
-        <div className="row">
-          <ul className="d-flex gap-3 gap-md-5 py-2 py-md-3 mb-0 mt-md-2 justify-content-end">
-            {icons.map((icon, index) => (
-              <li className="icons" key={index}>
-                {icon.link ? (
-                  <a href={icon.link} target="_blank" rel="noopener noreferrer">
-                    <img src={imageMap[icon.src]} alt={icon.name} />
+        <div className="row align-items-center">
+          {/* Social Icons - Right on desktop, Bottom on mobile */}
+          <div className="col-12 col-md-4 pt-2 pt-md-0 order-1 order-md-3">
+            <ul className="social-icons">
+              {socialLinks.map((social, index) => (
+                <li key={index}>
+                  <a 
+                    href={social.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    aria-label={`Visit my ${social.name}`}
+                  >
+                    <img 
+                      src={social.src} 
+                      alt={social.name}
+                      className="social-icon"
+                    />
                   </a>
-                ) : (
-                  <img src={imageMap[icon.src]} alt={icon.name} />
-                )}
-              </li>
-            ))}
-          </ul>
+                </li>
+              ))}
+            </ul>
+          </div>
+          
+          {/* Contact Text - Center */}
+          <div className="col-12 col-md-4  order-3 order-md-2 text-center">
+            <p className="contact-prompt">Click icons to contact</p>
+          </div>
+          
+          {/* Copyright - Left on desktop, Top on mobile */}
+          <div className="col-12 col-md-4 order-2 order-md-1 text-center text-md-start">
+            <p className="copyright">
+              All rights reserved &copy; {new Date().getFullYear()}
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };

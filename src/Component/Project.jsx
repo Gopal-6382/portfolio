@@ -3,27 +3,15 @@ import projects from "../assets/Project.json";
 import "../Sass/Project.scss";
 
 const ProjectsSection = () => {
-  const [animationState, setAnimationState] = useState({
-    initialLoad: false,
-    periodicFlicker: false,
-  });
+  const [initialLoad, setInitialLoad] = useState(false);
   const [flippedCards, setFlippedCards] = useState([]);
   const containerRef = useRef(null);
   const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
 
   useEffect(() => {
     const initialTimer = setTimeout(() => {
-      setAnimationState((prev) => ({ ...prev, initialLoad: true }));
+      setInitialLoad(true);
     }, 100);
-
-    const flickerInterval = setInterval(() => {
-      setAnimationState((prev) => ({ ...prev, periodicFlicker: true }));
-      const resetTimer = setTimeout(() => {
-        setAnimationState((prev) => ({ ...prev, periodicFlicker: false }));
-      }, 4000);
-
-      return () => clearTimeout(resetTimer);
-    }, 20000);
 
     // Handle scroll to unflip cards
     const handleScroll = () => {
@@ -37,7 +25,6 @@ const ProjectsSection = () => {
 
     return () => {
       clearTimeout(initialTimer);
-      clearInterval(flickerInterval);
       if (container) {
         container.removeEventListener('scroll', handleScroll);
       }
@@ -45,7 +32,7 @@ const ProjectsSection = () => {
   }, []);
 
   const toggleFlip = (projectId, e) => {
-    e.stopPropagation(); // Prevent event bubbling
+    e.stopPropagation();
     setFlippedCards((prev) =>
       prev.includes(projectId)
         ? prev.filter((id) => id !== projectId)
@@ -54,15 +41,15 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section className="projects-section" ref={containerRef}>
+    <section id="section-4" className="projects-section" ref={containerRef}>
       <div className="container-fluid">
         <div className="row gy-4">
           {projects.map((project) => (
             <div key={project.id} className="col-12 col-md-6 col-lg-4 col-xl-3 project">
               <div
-                className={`project-card ${animationState.initialLoad ? "animate-in" : ""} ${
-                  animationState.periodicFlicker ? "flicker-active" : ""
-                } ${flippedCards.includes(project.id) ? "flipped" : ""}`}
+                className={`project-card ${initialLoad ? "animate-in" : ""} ${
+                  flippedCards.includes(project.id) ? "flipped" : ""
+                }`}
                 onClick={(e) => !isTouchDevice && toggleFlip(project.id, e)}
                 onTouchEnd={(e) => isTouchDevice && toggleFlip(project.id, e)}
               >

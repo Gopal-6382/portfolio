@@ -7,6 +7,24 @@ $clr--1: #1d9ee8;
   margin: 0 3%;
 }
 
+@keyframes subtle-highlight {
+  0%,
+  90% {
+    /* Off state (18 seconds) */
+    opacity: 1;
+  }
+  91%,
+  94% {
+    /* On state (0.6 seconds) */
+    opacity: 0.2;
+  }
+  95%,
+  100% {
+    /* Off state (1 second) */
+    opacity: 1;
+  }
+}
+
 .project-card {
   display: flex;
   flex-direction: column;
@@ -18,7 +36,8 @@ $clr--1: #1d9ee8;
   position: relative;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.9);
   transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-    opacity 0.3s ease, box-shadow 0.3s ease;
+    opacity 0.3s ease;
+  animation: subtle-highlight 20s ease infinite;
   transform-style: preserve-3d;
   perspective: 1000px;
   opacity: 0;
@@ -27,9 +46,7 @@ $clr--1: #1d9ee8;
     opacity: 1;
   }
 
-  &.flicker-active {
-    animation: periodic-flicker 2s ease-in-out backwards;
-  }
+ 
 
   &.flipped {
     transform: rotateY(180deg) translateY(-0.5rem) scale(1.02);

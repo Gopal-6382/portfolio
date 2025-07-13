@@ -2,21 +2,23 @@
   {
     "name": "GitHub",
     "src": "git",
-    "link": null
+    "link":"https://github.com/Gopal-6382" 
+
   },
   {
     "name": "linkden",
     "src": "linkden",
-    "link": null
+    "link": "https://linkedin.com/in/gopalkrishnan-dev" 
+
   },
   {
     "name": "WhatsApp",
     "src": "wattsapp",
-    "link": null
+    "link": "https://wa.me/+916382972585"
   },
   {
     "name": "Instagram",
     "src": "insta",
-    "link": null
+    "link": "https://www.instagram.com/gopal_krishnan_gk"
   }
 ]

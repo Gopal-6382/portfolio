@@ -16,8 +16,11 @@ html, body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   background-color: #f6f9d4 !important;
+  
 }
-
+.modal-open {
+    background: #f6f9d4 !important;
+  }
 /* Image default styling */
 img {
   max-width: 100%;

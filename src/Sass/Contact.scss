@@ -103,6 +103,9 @@ $clr--1: #1d9ee8;
     z-index: 1 !important;
     opacity: 0.6;
   }
+  .lottie{
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: 300px) and (max-width: 767.8px) {
@@ -127,11 +130,11 @@ $clr--1: #1d9ee8;
   .contact textarea,
   .contact select {
     background-color: transparent !important; /* transparent background */
-    color: $clr--1 !important;
     font-weight: 900 !important; /* visible text */
     border: 1px solid rgba(0, 0, 0, 0.3); /* subtle border */
     z-index: 2;
     position: relative;
+    font-size:larger !important;
   }
 
   /* Placeholder Styling */
