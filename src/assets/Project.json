@@ -8,10 +8,10 @@
     "badge": "HOT",
     "backTitle": "Detailed Overview",
     "backContent": [
-      "First paragraph of detailed description",
-      "Second paragraph with more technical details",
-      "Third paragraph about challenges faced"
-    ]
+      "First paragraph of detailed description Second paragraph with more technical details Second paragraph with more technical details Second paragraph with more technical details  Second paragraph with more technical details Second paragraph with more technical details    Third paragraph about challenges faced First paragraph of detailed description Second paragraph with more technical details Second paragraph with more technical details Second paragraph with more technical details  Second paragraph with more technical details Second paragraph with more technical details    Third paragraph about challenges faced"
+    ],
+    "link": "https://example.com/project-1",
+    "git": "https://github.com/Gopal-6382/Gopal-6382/tree/TamilNadu_Bus"
   },
   {
     "id": "project-2",

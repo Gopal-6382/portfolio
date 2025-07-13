@@ -17,7 +17,8 @@ $clr--1: #1d9ee8;
   overflow: hidden;
   position: relative;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.9);
-  transition: transform 0.4s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    opacity 0.3s ease, box-shadow 0.3s ease;
   transform-style: preserve-3d;
   perspective: 1000px;
   opacity: 0;
@@ -30,7 +31,7 @@ $clr--1: #1d9ee8;
     animation: periodic-flicker 2s ease-in-out backwards;
   }
 
-  &:hover {
+  &.flipped {
     transform: rotateY(180deg) translateY(-0.5rem) scale(1.02);
     box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.9);
 
@@ -38,7 +39,7 @@ $clr--1: #1d9ee8;
       transform: rotateY(180deg);
     }
     .project-back {
-      transform: rotateY(0deg);
+      transform: rotateY(0);
     }
   }
 
@@ -50,7 +51,7 @@ $clr--1: #1d9ee8;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    transition: transform 0.6s ease;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   .project-front {
@@ -169,13 +170,18 @@ $clr--1: #1d9ee8;
       cursor: pointer;
       transition: all 0.2s ease;
       z-index: 10;
-
+      @media (hover: none) {
+        &:hover {
+          transform: none !important;
+        }
+      }
       &:hover {
         transform: translateY(-2px);
       }
 
       &.flip-btn {
-        background-color: #6c757d !important;
+        background-color: $clr--1 !important;
+        color: white;
       }
     }
   }
