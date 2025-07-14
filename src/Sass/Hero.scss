@@ -237,3 +237,21 @@ $clr--1: #1d9ee8;
     margin-top: -3rem !important;
   }
 }
+.modal-footer {
+  .btn{
+    border-radius: 50px;
+  }
+}.about-me-container {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -26,6 +26,9 @@
   background: transparent;
   height: 10rem;
   margin-bottom: 5%;
+  &.active {
+    color: #0066cc !important; // Your preferred active color
+  }
 }
 
 .section-1.hide-on-scroll {
@@ -156,3 +159,4 @@
     animation: none !important;
   }
 }
+  
