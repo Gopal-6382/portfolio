@@ -1,5 +1,4 @@
 import { useState } from 'react';
-
 const BoardSvg = ({ imageUrl }) => {
   const [imageError, setImageError] = useState(false);
 

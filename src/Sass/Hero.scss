@@ -64,9 +64,8 @@ $clr--1: #1d9ee8;
     z-index: 2;
     pointer-events: none;
   }
-
 }
-.modal-footer{
+.modal-footer {
   background-color: #f6f9d4 !important;
 }
 
@@ -221,5 +220,20 @@ $clr--1: #1d9ee8;
     top: 25%;
     width: 15%;
     left: 5%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.5px) {
+  .star-2 {
+    height: 0%;
+  }
+  .tech-stack {
+    margin-top: 2rem;
+  }
+  .hero1 {
+    padding-top: 4rem !important;
+  }
+  .t-hero {
+    margin-top: -3rem !important;
   }
 }
