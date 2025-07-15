@@ -1,63 +1,92 @@
 [
   {
-    "id": "project-1",
-    "title": "Bus Finder App",
-    "description": "Modern responsive website with interactive features",
+    "id": "android-1",
+    "title": "Bus Finder App (Android)",
+    "description": "Java-based Android app with live bus tracking and GPS support.",
     "image": "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
-    "tags": ["React", "Tailwind", "API"],
-    "badge": "AI Powered",
+    "tags": ["Java", "Android", "Firebase"],
+    "badge": "Mobile App",
     "backTitle": "Detailed Overview",
     "backContent": [
-      "First paragraph of detailed description Second paragraph with more technical details Second paragraph with more technical details Second paragraph with more technical details  Second paragraph with more technical details Second paragraph with more technical details    Third paragraph about challenges faced First paragraph of detailed description Second paragraph with more technical details Second paragraph with more technical details Second paragraph with more technical details  Second paragraph with more technical details Second paragraph with more technical details    Third paragraph about challenges faced"
+      "The Bus Finder Android app helps users track buses in real-time with GPS.",
+      "Built using Java, Google Maps API, and Firebase for authentication and database.",
+      "Handled challenges like optimizing GPS polling and API performance."
     ],
-    "link": "https://example.com/project-1",
     "git": "https://github.com/Gopal-6382/Gopal-6382/tree/TamilNadu_Bus"
   },
   {
-    "id": "project-2",
-    "title": "Mobile App",
-    "description": "Cross-platform application for iOS and Android",
+    "id": "java-1",
+    "title": "Java CLI Utilities Collection",
+    "description": "A set of Java console apps including number systems and string operations.",
     "image": "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
-    "tags": ["Flutter", "Firebase", "UX"],
-    "badge": "POPULAR",
-    "backTitle": "Detailed Overview",
+    "tags": ["Java", "CLI", "Practice"],
+    "badge": "Java Utilities",
+    "backTitle": "Included Programs",
     "backContent": [
-      "First paragraph of detailed description",
-      "Second paragraph with more technical details",
-      "Third paragraph about challenges faced"
+      "A collection of Java programs like Armstrong check, Prime range, ToggleCase, Fibonacci, and more.",
+      "Useful for quick demonstrations and algorithm practice.",
+      "Shows OOP principles, loops, conditionals, and string operations."
     ],
-    "backTags": ["Frontend", "Backend", "API"]
+    "git": "https://github.com/Gopal-6382/Gopal-6382/tree/oreters"
   },
   {
-    "id": "project-3",
-    "title": "Mobile App",
-    "description": "Cross-platform application for iOS and Android",
+    "id": "react-1",
+    "title": "React Weather & Currency App",
+    "description": "Weather and currency converter apps with real-time API integration.",
     "image": "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
-    "tags": ["Flutter", "Firebase", "UX"],
-    "badge": "POPULAR"
+    "tags": ["React", "API", "Hooks"],
+    "badge": "LIVE DEMO",
+    "backTitle": "Details",
+    "backContent": [
+      "Weather app uses OpenWeather API; currency converter uses real-time exchange API.",
+      "Features dynamic input, conversion, dark/light theme switch, and error handling.",
+      "Designed using Tailwind CSS and functional components with useState and useEffect."
+    ],
+    "git": "https://github.com/Gopal-6382/Gopal-6382/tree/react-second_project"
   },
   {
-    "id": "project-4",
-    "title": "Mobile App",
-    "description": "Cross-platform application for iOS and Android",
+    "id": "react-2",
+    "title": "React CRUD & Mongo Integration",
+    "description": "Basic CRUD operations with MongoDB connection.",
     "image": "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
-    "tags": ["Flutter", "Firebase", "UX"],
-    "badge": "POPULAR"
+    "tags": ["React", "CRUD", "MongoDB"],
+    "badge": "Fullstack",
+    "backTitle": "Components Included",
+    "backContent": [
+      "UserList.jsx, axios.jsx used to fetch and display user data from MongoDB.",
+      "CRUD operations are handled in components like Cart.jsx, CardComponent.jsx, etc.",
+      "MongoDB backend integrated with Express API for testing."
+    ],
+    "git": "https://github.com/Gopal-6382/Gopal-6382/tree/react-second_project"
   },
   {
-    "id": "project-5",
-    "title": "Mobile App",
-    "description": "Cross-platform application for iOS and Android",
+    "id": "react-3",
+    "title": "React Component Learning Lab",
+    "description": "Collection of various reusable and learning-focused React components.",
     "image": "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
-    "tags": ["Flutter", "Firebase", "UX"],
-    "badge": "POPULAR"
+    "tags": ["React", "Practice", "Components"],
+    "badge": "LEARNING",
+    "backTitle": "Included Components",
+    "backContent": [
+      "Strong_Password_Generator.jsx, Calendar.jsx, BMI calculator, Clock, Fish Data fetcher.",
+      "Shows useReducer, useMemo, conditional rendering, props, and state.",
+      "Perfect for showcasing grasp on modern React ecosystem through micro projects."
+    ],
+    "git": "https://github.com/Gopal-6382/Gopal-6382/tree/React_Learning"
   },
   {
-    "id": "project-6",
-    "title": "Mobile App",
-    "description": "Cross-platform application for iOS and Android",
+    "id": "web-bootstrap",
+    "title": "Bootstrap UI Projects",
+    "description": "Static frontend pages with all core Bootstrap components demonstrated.",
     "image": "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
-    "tags": ["Flutter", "Firebase", "UX"],
-    "badge": "POPULAR"
+    "tags": ["HTML", "CSS", "Bootstrap"],
+    "badge": "Frontend",
+    "backTitle": "Overview",
+    "backContent": [
+      "Over 30+ Bootstrap examples: buttons, modals, cards, grids, navbar, tables, and more.",
+      "Useful for fast prototyping and practicing layout designs.",
+      "Hosted in a dedicated Bootstrap directory for easy navigation."
+    ],
+    "git": "https://github.com/Gopal-6382/Gopal-6382/tree/bootstrap"
   }
 ]
