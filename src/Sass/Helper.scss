@@ -1,0 +1,109 @@
+// src/Sass/HelperComponents.scss
+.developer-pillar {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.05);
+  margin-bottom: 1.5rem;
+}
+
+.pillar-title {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pillar-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.pillar-list {
+  padding-left: 1rem;
+  margin-bottom: 0;
+}
+
+.pillar-list-item {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.pillar-skills {
+  display: grid;
+  gap: 1rem;
+}
+
+.skill-item {
+  margin-bottom: 0.5rem;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+}
+
+.skill-bar {
+  height: 6px;
+  background: #f0f0f0;
+  border-radius: 3px;
+}
+
+.skill-progress {
+  height: 100%;
+  border-radius: 3px;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1.5rem;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #0066cc;
+  border: 3px solid #f0f4ff;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 7px;
+  top: 16px;
+  bottom: -1.5rem;
+  width: 2px;
+  background: #e0e0e0;
+}
+
+.timeline-year {
+  font-weight: 600;
+  color: #0066cc;
+}
+
+.timeline-event-title {
+  font-weight: 700;
+  margin: 0.25rem 0;
+}
+
+.timeline-description {
+  color: #666;
+  line-height: 1.5;
+}

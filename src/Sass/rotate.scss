@@ -1,0 +1,69 @@
+@mixin rotate($deg: 360deg, $duration: 2s, $timing: linear) {
+  animation: rotate-animation $duration $timing infinite;
+  transform: rotate($deg);
+}
+
+@keyframes rotate-animation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+// Define keyframes once
+@keyframes text-focus-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+// Mixin to reuse this animation
+@mixin text-focus-animation(
+  $duration: 1s,
+  $timing: ease,
+  $delay: 0s,
+  $repeat: 1
+) {
+  animation: text-focus-in $duration $timing $delay $repeat both;
+  -webkit-animation: text-focus-in $duration $timing $delay $repeat both;
+}
+@mixin rotate($duration: 5s) {
+  animation: rotateAnim $duration linear infinite;
+}
+
+@keyframes rotateAnim {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@mixin fade-in($duration: 0.4s, $distance: 10px) {
+  opacity: 0;
+  transform: translateY($distance);
+  animation: fadeInItem $duration ease forwards;
+}
+
+@keyframes fadeInItem {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInContainer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
