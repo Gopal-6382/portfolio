@@ -39,7 +39,7 @@ export const Hero2 = () => {
               ].map((tech, index) => (
                 <img
                   key={index}
-                  src={`/public${tech.path}`}
+                  src={tech.path}
                   alt={tech.name}
                   className="tech-icon"
                   width="40"
