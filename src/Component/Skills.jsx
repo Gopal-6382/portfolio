@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import { skills } from "../skills.js";
+import { skills } from "../assets/skills.js";
 import "../Sass/skill.scss";
 
 const SkillGame = () => {

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import "../Sass/Nav.scss";
 
 const navItems = [
@@ -13,47 +13,99 @@ export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [hideNavbar, setHideNavbar] = useState(false);
   const [activeSection, setActiveSection] = useState("section-1");
+  const [lastClickedSection, setLastClickedSection] = useState(null);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
-  useEffect(() => {
-    // Set initial active section from URL or default to section-1
-    const hash = window.location.hash.substring(1);
-    const validSection = navItems.some(item => item.href === `#${hash}`);
-    setActiveSection(validSection ? hash : "section-1");
+  // Smooth scroll to section with callback when complete
+  const scrollToSection = useCallback((sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (!element) return;
 
-    // Scroll to section if hash exists
-    if (validSection) {
-      setTimeout(() => {
-        document.getElementById(hash)?.scrollIntoView();
-      }, 100);
+    // Only scroll if not already at this section
+    const { top } = element.getBoundingClientRect();
+    if (Math.abs(top) > 10) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
+  }, []);
+
+  // Handle hash changes from URL or navigation
+  const handleHashChange = useCallback(() => {
+    const hash = window.location.hash.substring(1);
+    const isValidSection = navItems.some(item => item.href === `#${hash}`);
+    
+    if (isValidSection && hash !== activeSection) {
+      setActiveSection(hash);
+      scrollToSection(hash);
+    } else if (!isValidSection) {
+      // Default to section-1 if invalid hash
+      setActiveSection("section-1");
+      window.history.replaceState(null, "", "#section-1");
+      scrollToSection("section-1");
+    }
+  }, [activeSection, scrollToSection]);
+
+  useEffect(() => {
+    // Initial setup
+    handleHashChange();
+
+    // Set up hashchange listener
+    window.addEventListener('hashchange', handleHashChange);
 
     // Scroll handler for hiding navbar and detecting active section
     let lastScrollY = window.scrollY;
+    let scrollTimeout;
+
     const handleScroll = () => {
+      // Clear any pending timeout
+      clearTimeout(scrollTimeout);
+
+      // Hide/show navbar logic
       const currentScroll = window.scrollY;
       setHideNavbar(currentScroll > 50 && currentScroll > lastScrollY);
       lastScrollY = currentScroll;
 
-      // Detect which section is currently in view
-      document.querySelectorAll("section[id]").forEach(section => {
-        const { top, height } = section.getBoundingClientRect();
-        if (top <= 100 && top + height > 100) {
-          setActiveSection(section.id);
+      // Detect active section with debounce
+      scrollTimeout = setTimeout(() => {
+        let newActiveSection = "section-1";
+        document.querySelectorAll("section[id]").forEach(section => {
+          const { top, height } = section.getBoundingClientRect();
+          if (top <= 100 && top + height > 100) {
+            newActiveSection = section.id;
+          }
+        });
+
+        // Only update if different from current and not recently clicked
+        if (newActiveSection !== activeSection && newActiveSection !== lastClickedSection) {
+          setActiveSection(newActiveSection);
+          window.history.replaceState(null, "", `#${newActiveSection}`);
         }
-      });
+      }, 100);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('hashchange', handleHashChange);
+      clearTimeout(scrollTimeout);
+    };
+  }, [activeSection, handleHashChange, lastClickedSection]);
 
-  const handleNavClick = (sectionId) => {
+  const handleNavClick = (sectionId, e) => {
+    e.preventDefault();
+    
+    // Don't do anything if clicking the currently active section
+    if (sectionId === activeSection) return;
+
     setMenuOpen(false);
+    setLastClickedSection(sectionId);
     setActiveSection(sectionId);
-    // Update URL without adding to history
     window.history.replaceState(null, "", `#${sectionId}`);
+    scrollToSection(sectionId);
+
+    // Reset lastClickedSection after scroll would complete
+    setTimeout(() => setLastClickedSection(null), 1000);
   };
 
   return (
@@ -83,7 +135,7 @@ export const Navbar = () => {
                       className={`nav-item fade-in-item ${activeSection === item.href.substring(1) ? "active" : ""}`}
                     >
                       <a
-                        onClick={() => handleNavClick(item.href.substring(1))}
+                        onClick={(e) => handleNavClick(item.href.substring(1), e)}
                         className="nav-link"
                         href={item.href}
                       >

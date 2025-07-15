@@ -1,11 +1,11 @@
 [
   {
     "id": "project-1",
-    "title": "Web Project",
+    "title": "Bus Finder App",
     "description": "Modern responsive website with interactive features",
     "image": "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
     "tags": ["React", "Tailwind", "API"],
-    "badge": "HOT",
+    "badge": "AI Powered",
     "backTitle": "Detailed Overview",
     "backContent": [
       "First paragraph of detailed description Second paragraph with more technical details Second paragraph with more technical details Second paragraph with more technical details  Second paragraph with more technical details Second paragraph with more technical details    Third paragraph about challenges faced First paragraph of detailed description Second paragraph with more technical details Second paragraph with more technical details Second paragraph with more technical details  Second paragraph with more technical details Second paragraph with more technical details    Third paragraph about challenges faced"
