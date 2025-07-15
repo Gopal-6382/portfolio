@@ -5,6 +5,10 @@ import { ModalContent } from "./ModalContent";
 import "../Sass/Hero.scss";
 import BoardSvg from "./Hero";
 import img1 from "../assets/img/IMG_20230126_214810.jpg";
+import mongoIcon from "../assets/skill-icons--mongodb.svg";
+import expressIcon from "../assets/skill-icons--expressjs-dark.svg";
+import reactIcon from "../assets/skill-icons--react-dark.svg";
+import nodeIcon from "../assets/skill-icons--nodejs-dark.svg";
 
 export const Hero2 = () => {
   const [show, setShow] = useState(false);
@@ -25,29 +29,24 @@ export const Hero2 = () => {
             <img src="/start2.svg" alt="Start2" className="star-2" />
             <h1 className="t-hero">I Design And Develop Top Notch Websites</h1>
             <div className="tech-stack d-flex gap-3 py-2">
-              {[
-                { name: "MongoDB", path: "/Icons/skill-icons--mongodb.svg" },
-                {
-                  name: "Express",
-                  path: "/Icons/skill-icons--expressjs-dark.svg",
-                },
-                { name: "React", path: "/Icons/skill-icons--react-dark.svg" },
-                {
-                  name: "Node.js",
-                  path: "/Icons/skill-icons--nodejs-dark.svg",
-                },
-              ].map((tech, index) => (
-                <img
-                  key={index}
-                  src={tech.path}
-                  alt={tech.name}
-                  className="tech-icon"
-                  width="40"
-                  height="40"
-                  loading="lazy"
-                />
-              ))}
-            </div>
+  {[
+    { name: "MongoDB", icon: mongoIcon },
+    { name: "Express", icon: expressIcon },
+    { name: "React", icon: reactIcon },
+    { name: "Node.js", icon: nodeIcon },
+  ].map((tech, index) => (
+    <img
+      key={index}
+      src={tech.icon}
+      alt={tech.name}
+      className="tech-icon"
+      width="40"
+      height="40"
+      loading="lazy"
+    />
+  ))}
+</div>
+
             <div className="btnsection d-flex gap-3 mt-5">
               <button
                 className="btn text-white rounded-5"
