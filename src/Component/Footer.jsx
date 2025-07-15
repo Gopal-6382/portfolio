@@ -36,7 +36,7 @@ export const Footer = () => {
       <div className="container-fluid">
         <div className="row align-items-center">
           {/* Social Icons - Right on desktop, Bottom on mobile */}
-          <div className="col-12 col-md-4 pt-2 pt-md-0 order-1 pe-md-5 order-md-3">
+          <div className="col-12 col-md-4 pt-2 pt-md-0 order-1 pe-md-3 order-md-3">
             <ul className="social-icons">
               {socialLinks.map((social, index) => (
                 <li key={index}>

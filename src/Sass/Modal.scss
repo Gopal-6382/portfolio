@@ -1,0 +1,193 @@
+// src/Sass/Modal.scss
+.modal-title-icon {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, #0066cc 0%, #004499 100%);
+  border-radius: 6px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.modal-about-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.modal-hero-section {
+  background: linear-gradient(95deg, #f6f9d4 0%, #f0f4ff 100%);
+  padding: 2.5rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.modal-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: white;
+  margin: 0 auto 1.5rem;
+  border: 3px solid white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.modal-avatar-inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e0e5ff;
+  font-size: 3rem;
+}
+
+.modal-hero-title {
+  font-weight: 800;
+  margin: 0.5rem 0;
+  font-size: 2.2rem;
+  background: linear-gradient(90deg, #2a2a2a 0%, #0066cc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.modal-hero-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.modal-dna-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 2.5rem;
+}
+
+.modal-highlight-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.modal-highlight-title {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #2a2a2a;
+}
+
+.modal-highlight-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #f6f9d4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.modal-cta-section {
+  background: #f8f9fa;
+  padding: 2rem;
+  text-align: center;
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.modal-cta-text {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.modal-cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.modal-cta-primary {
+  background: #0066cc;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.modal-cta-secondary {
+  background: white;
+  color: #0066cc;
+  border: 1px solid #0066cc;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.modal-cta-link {
+  text-decoration: none;
+  color: #0066cc;
+}
+
+.modal-hire-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.modal-hire-cta {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.modal-hire-button {
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+}
+
+.modal-resume-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.modal-resume-section-title {
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #0066cc;
+}
+
+.modal-resume-cta {
+  text-align: center;
+}
+
+.modal-resume-button {
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+}
+
+.modal-resume-link {
+  text-decoration: none;
+}
