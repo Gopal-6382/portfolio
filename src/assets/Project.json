@@ -37,6 +37,7 @@
     "tags": ["React", "API", "Hooks"],
     "badge": "LIVE DEMO",
     "backTitle": "Details",
+    
     "backContent": [
       "Weather app uses OpenWeather API; currency converter uses real-time exchange API.",
       "Features dynamic input, conversion, dark/light theme switch, and error handling.",

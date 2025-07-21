@@ -38,7 +38,7 @@ export const ModalContent = ({ modalType, handleClose }) => {
                   <div className="modal-avatar-inner">👨💻</div>
                 </div>
 
-                <h2 className="modal-hero-title">Gopal Krishna</h2>
+                <h2 className="modal-hero-title">Gopal Krishnan</h2>
 
                 <p className="modal-hero-subtitle">
                   <TypewriterEffect
@@ -57,51 +57,13 @@ export const ModalContent = ({ modalType, handleClose }) => {
                   icon="</>"
                   title="Technical Stack"
                   items={[
-                    { name: "React", level: 90 },
-                    { name: "TypeScript", level: 85 },
-                    { name: "CSS/Sass", level: 95 },
-                    { name: "Node.js", level: 70 },
+                    { name: "MongoDb", level: 90 },
+                    { name: "Express.js", level: 95 },
+                    { name: "React", level: 95 },
+                    { name: "Node.js", level: 90 },
                   ]}
                   color="#0066cc"
                 />
-
-                <DeveloperPillar
-                  icon="⚙️"
-                  title="Development Philosophy"
-                  items={[
-                    "Mobile-first approach",
-                    "Component-driven architecture",
-                    "Pixel-perfect implementation",
-                    "Performance budget awareness",
-                  ]}
-                  color="#2a2a2a"
-                  isList={true}
-                />
-
-                <div className="modal-highlight-card">
-                  <h3 className="modal-highlight-title">
-                    <span className="modal-highlight-icon">🚀</span>
-                    Career Highlights
-                  </h3>
-
-                  <div style={{ marginTop: "1.5rem" }}>
-                    <TimelineItem
-                      year="2023-Present"
-                      title="Freelance Frontend Developer"
-                      description="Delivered 8+ production-ready web apps with React"
-                    />
-                    <TimelineItem
-                      year="2021-2023"
-                      title="UI Developer @ Startup"
-                      description="Built design system used by 5+ products"
-                    />
-                    <TimelineItem
-                      year="2020"
-                      title="Open Source Contributor"
-                      description="Merged PRs to 3 popular React libraries"
-                    />
-                  </div>
-                </div>
               </div>
 
               {/* CTA Section */}
@@ -155,7 +117,18 @@ export const ModalContent = ({ modalType, handleClose }) => {
                 color="#0066cc"
                 isList={true}
               />
-
+              <DeveloperPillar
+                icon="⚙️"
+                title="Development Philosophy"
+                items={[
+                  "Mobile-first approach",
+                  "Component-driven architecture",
+                  "Pixel-perfect implementation",
+                  "Performance budget awareness",
+                ]}
+                color="#2a2a2a"
+                isList={true}
+              />
               <DeveloperPillar
                 icon="🛠️"
                 title="Working Style"
@@ -191,25 +164,37 @@ export const ModalContent = ({ modalType, handleClose }) => {
       return (
         <>
           <Modal.Header closeButton style={modalStyle}>
-            <Modal.Title className="modal-title">My Professional Journey</Modal.Title>
+            <Modal.Title className="modal-title">
+              My Professional Journey
+            </Modal.Title>
           </Modal.Header>
           <Modal.Body style={{ ...modalStyle, padding: "2rem" }}>
             <div className="modal-resume-grid">
               <div>
                 <h3 className="modal-resume-section-title">Education</h3>
                 <TimelineItem
-                  year="2018-2022"
-                  title="Computer Science Degree"
-                  description="Specialized in Human-Computer Interaction"
+                  year="2022-2025"
+                  title="Bacholor Of Computer Application"
+                  description="Specialized in Web Developement"
                 />
               </div>
 
               <div>
-                <h3 className="modal-resume-section-title">Experience</h3>
+                <h3 className="modal-resume-section-title">
+                  Career Highlights
+                </h3>
                 <TimelineItem
-                  year="2022-Present"
-                  title="Freelance Developer"
-                  description="12+ completed projects"
+                  year="2023"
+                  title="Tutore"
+                  description="Working in the tutorial center"
+                />
+              </div>
+              <div>
+                <h3 className="modal-resume-section-title">Project</h3>
+                <TimelineItem
+                  year="2024"
+                  title="Bus Finder App"
+                  description="I Build  the  Bus finder app in Android studio"
                 />
               </div>
             </div>
@@ -220,7 +205,11 @@ export const ModalContent = ({ modalType, handleClose }) => {
                 size="lg"
                 className="modal-resume-button"
               >
-                <a className="modal-resume-link" href="/public/resume.pdf" download>
+                <a
+                  className="modal-resume-link"
+                  href="/public/resume.pdf"
+                  download
+                >
                   Download Full Resume (PDF)
                 </a>
               </Button>

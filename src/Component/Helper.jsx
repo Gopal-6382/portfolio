@@ -39,12 +39,26 @@ export const TypewriterEffect = ({
     }
 
     return () => clearTimeout(timeout);
-  }, [displayedText, currentIndex, isTyping, delayBetween, eraseSpeed, text, typingSpeed]);
+  }, [
+    displayedText,
+    currentIndex,
+    isTyping,
+    delayBetween,
+    eraseSpeed,
+    text,
+    typingSpeed,
+  ]);
 
   return <>{displayedText}</>;
 };
 
-export const DeveloperPillar = ({ icon, title, items, color, isList = false }) => (
+export const DeveloperPillar = ({
+  icon,
+  title,
+  items,
+  color,
+  isList = false,
+}) => (
   <div className="developer-pillar">
     <h3 className="pillar-title" style={{ color }}>
       <span className="pillar-icon" style={{ color }}>
