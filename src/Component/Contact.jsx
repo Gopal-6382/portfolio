@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from "react";
 import Lottie from "lottie-react";
 import emailjs from "@emailjs/browser";
 import "../Sass/Contact.scss";
-import PudgyWork from "/public/Pudgy work (1).json";
+import PudgyWork from "../assets/Contact/Pudgy work (1)";
 
 const ContactForm = () => {
   const lottieRef = useRef();

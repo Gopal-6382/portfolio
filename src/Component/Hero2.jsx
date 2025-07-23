@@ -5,10 +5,14 @@ import { ModalContent } from "./ModalContent";
 import "../Sass/Hero.scss";
 import BoardSvg from "./Hero";
 import img1 from "../assets/img/IMG_20230126_214810.jpg";
-import mongo from "../assets/skill-icons--mongodb.svg";
-import express from "../assets/skill-icons--expressjs-dark.svg";
-import react from "../assets/skill-icons--react-dark.svg";
-import node from "../assets/skill-icons--nodejs-dark.svg";
+import mongo from "../assets/Icons/skill-icons--mongodb.svg";
+import express from "../assets/Icons/skill-icons--expressjs-dark.svg";
+import react from "../assets/Icons/skill-icons--react-dark.svg";
+import node from "../assets/Icons/skill-icons--nodejs-dark.svg";
+import arrow from "../assets/Hero/Hero-Arrow.svg";
+import starhero from  "../assets/Hero/Hero-Star.svg";
+import bulb from "../assets/Hero/bulb.svg";
+import star from "../assets/Hero/start2.svg";
 export const Hero2 = () => {
   const [show, setShow] = useState(false);
   const [modalType, setModalType] = useState("");
@@ -25,7 +29,7 @@ export const Hero2 = () => {
       <div className="container">
         <div className="row">
           <div className="col-12 hero1 pe-md-5 col-md-6">
-            <img src="/start2.svg" alt="Start2" className="star-2" />
+            <img src={star} alt="Start2" className="star-2" />
             <h1 className="t-hero">I Design And Develop Top Notch Websites</h1>
            <div className="tech-stack d-flex gap-3 py-2">
   {[
@@ -68,10 +72,10 @@ export const Hero2 = () => {
             </div>
           </div>
           <div className="col-12 hero-2 col-md-6 board position-relative">
-            <img src="/Hero-Arrow.svg" alt="Arrow" className="hero-arrow" />
+            <img src={arrow} alt="Arrow" className="hero-arrow" />
             <BoardSvg imageUrl={img1} className="b-svg" />
-            <img src="/bulb.svg" alt="Bulb" className="bulb" />
-            <img src="/Hero-Star.svg" alt="Hero Star" className="hero-star" />
+            <img src={bulb} alt="Bulb" className="bulb" />
+            <img src={starhero} alt="Hero Star" className="hero-star" />
           </div>
         </div>
       </div>

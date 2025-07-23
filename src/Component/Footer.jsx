@@ -1,8 +1,8 @@
 import "../Sass/Footer.scss";
-import insta from "../assets/insta.svg";
-import linkden from "../assets/linkden.svg";
-import git from "../assets/git.svg";
-import wattsapp from "../assets/wattsapp.svg";
+import insta from "../assets/Social/insta.svg";
+import linkden from "../assets/Social/linkden.svg";
+import git from "../assets/Social/git.svg";
+import wattsapp from "../assets/Social/wattsapp.svg";
 
 // Define your social links directly (no JSON needed)
 const socialLinks = [

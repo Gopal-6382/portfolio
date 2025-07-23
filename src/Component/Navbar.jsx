@@ -1,5 +1,6 @@
 import { useEffect, useState, useCallback } from "react";
 import "../Sass/Nav.scss";
+import star from "../assets/Hero/start.svg";
 
 const navItems = [
   { id: 1, name: "Home", href: "#section-1" },
@@ -151,8 +152,8 @@ export const Navbar = () => {
         </div>
       </div>
 
-      <img src="/start.svg" alt="Logo" className="Star" />
-      <img src="/start.svg" alt="Logo" className="Star-right" />
+      <img src={star} alt="Logo" className="Star" />
+      <img src={star} alt="Logo" className="Star-right" />
     </div>
   );
 };

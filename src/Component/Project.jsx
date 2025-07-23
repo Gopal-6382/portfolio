@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import projects from "../assets/Project.json";
+import projects from "../assets/Json/Project.json";
 import "../Sass/Project.scss";
 
 const ProjectsSection = () => {

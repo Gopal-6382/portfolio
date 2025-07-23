@@ -85,7 +85,7 @@ export const ModalContent = ({ modalType, handleClose }) => {
                   <button className="modal-cta-secondary">
                     <a
                       className="modal-cta-link"
-                      href="/public/resume.pdf"
+                      href="../assets/Resume/resume.pdf"
                       download
                     >
                       Download Resume
@@ -207,7 +207,7 @@ export const ModalContent = ({ modalType, handleClose }) => {
               >
                 <a
                   className="modal-resume-link"
-                  href="/public/resume.pdf"
+                  href="../assets/Resume/resume.pdf"
                   download
                 >
                   Download Full Resume (PDF)
