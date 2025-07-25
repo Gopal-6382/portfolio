@@ -34,7 +34,7 @@ export const Footer = () => {
       <div className="container-fluid">
         <div className="row align-items-center">
           {/* Social Icons - Right on desktop, Bottom on mobile */}
-          <div className="col-12 col-md-4 pt-2 pt-md-0 order-1 pe-md-3 order-md-3">
+          <div className="col-12 col-md-4 pt-2 pt-md-0 order-1 pe-md-5 order-md-3">
             <ul className="social-icons">
               {socialLinks.map((social, index) => (
                 <li key={index}>
@@ -56,13 +56,13 @@ export const Footer = () => {
           </div>
 
           {/* Contact Text - Center */}
-          <div className="col-12 col-md-4  order-3 order-md-2 text-center">
+          <div className="col-12 col-md-4 order-3 order-md-2 text-center">
             <p className="contact-prompt">Click icons to contact</p>
           </div>
 
           {/* Copyright - Left on desktop, Top on mobile */}
-          <div className="col-12 col-md-4 ps-md-4 order-2 order-md-1 text-center text-md-start">
-            <p className="copyright">
+          <div className="col-12 col-md-4 ps-md-5 order-1  text-center text-md-start">
+            <p className="copyright order-1">
               All rights reserved &copy; {new Date().getFullYear()}
             </p>
           </div>
