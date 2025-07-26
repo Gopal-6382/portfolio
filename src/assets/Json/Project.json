@@ -12,8 +12,44 @@
       "Built using Java, Google Maps API, and Firebase for authentication and database.",
       "Handled challenges like optimizing GPS polling and API performance."
     ],
-    "git": "https://github.com/Gopal-6382/Gopal-6382/tree/TamilNadu_Bus"
+    "git": "https://github.com/Gopal-6382/Gopal-6382/tree/TamilNadu_Bus",
+    "link": "https://github.com/Gopal-6382/Bus-Apk"
+
   },
+  {
+    "id": "react-1",
+    "title": "React CRUD & Mongo Integration",
+    "description": "Basic CRUD operations with MongoDB connection.",
+    "image": "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+    "tags": ["React", "CRUD", "MongoDB"],
+    "badge": "Fullstack",
+    "backTitle": "Components Included",
+    "backContent": [
+      "UserList.jsx, axios.jsx used to fetch and display user data from MongoDB.",
+      "CRUD operations are handled in components like Cart.jsx, CardComponent.jsx, etc.",
+      "MongoDB backend integrated with Express API for testing."
+    ],
+    "git": "https://github.com/Gopal-6382/React_Components",
+    "link":"https://react-components-ayicj5gdi-gopal-krishnan.vercel.app"
+  },
+   {
+    "id": "react-2",
+    "title": "React Weather &  And Components ",
+    "description": "Weather and currency converter apps with real-time API integration.",
+    "image": "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+    "tags": ["React", "API", "Hooks"],
+    "badge": "LIVE DEMO",
+    "backTitle": "Details",
+    
+    "backContent": [
+      "Weather app uses OpenWeather API; currency converter uses real-time exchange API.",
+      "Features dynamic input, conversion, dark/light theme switch, and error handling.",
+      "Designed using Tailwind CSS and functional components with useState and useEffect."
+    ],
+    "git": "https://github.com/Gopal-6382/React_Components-2",
+    "link":"https://react-components-2-cvd7-f5oghtkx6-gopal-krishnan.vercel.app/"
+  },
+  
   {
     "id": "java-1",
     "title": "Java CLI Utilities Collection",
@@ -29,52 +65,8 @@
     ],
     "git": "https://github.com/Gopal-6382/Gopal-6382/tree/oreters"
   },
-  {
-    "id": "react-1",
-    "title": "React Weather & Currency App",
-    "description": "Weather and currency converter apps with real-time API integration.",
-    "image": "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
-    "tags": ["React", "API", "Hooks"],
-    "badge": "LIVE DEMO",
-    "backTitle": "Details",
-    
-    "backContent": [
-      "Weather app uses OpenWeather API; currency converter uses real-time exchange API.",
-      "Features dynamic input, conversion, dark/light theme switch, and error handling.",
-      "Designed using Tailwind CSS and functional components with useState and useEffect."
-    ],
-    "git": "https://github.com/Gopal-6382/Gopal-6382/tree/react-second_project"
-  },
-  {
-    "id": "react-2",
-    "title": "React CRUD & Mongo Integration",
-    "description": "Basic CRUD operations with MongoDB connection.",
-    "image": "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
-    "tags": ["React", "CRUD", "MongoDB"],
-    "badge": "Fullstack",
-    "backTitle": "Components Included",
-    "backContent": [
-      "UserList.jsx, axios.jsx used to fetch and display user data from MongoDB.",
-      "CRUD operations are handled in components like Cart.jsx, CardComponent.jsx, etc.",
-      "MongoDB backend integrated with Express API for testing."
-    ],
-    "git": "https://github.com/Gopal-6382/Gopal-6382/tree/react-second_project"
-  },
-  {
-    "id": "react-3",
-    "title": "React Component Learning Lab",
-    "description": "Collection of various reusable and learning-focused React components.",
-    "image": "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
-    "tags": ["React", "Practice", "Components"],
-    "badge": "LEARNING",
-    "backTitle": "Included Components",
-    "backContent": [
-      "Strong_Password_Generator.jsx, Calendar.jsx, BMI calculator, Clock, Fish Data fetcher.",
-      "Shows useReducer, useMemo, conditional rendering, props, and state.",
-      "Perfect for showcasing grasp on modern React ecosystem through micro projects."
-    ],
-    "git": "https://github.com/Gopal-6382/Gopal-6382/tree/React_Learning"
-  },
+ 
+ 
   {
     "id": "web-bootstrap",
     "title": "Bootstrap UI Projects",
