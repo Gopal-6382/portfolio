@@ -116,7 +116,7 @@ const SkillGame = () => {
 
   return (
     <section id="section-3" className="skill-section" ref={sectionRef}>
-      <h2 className="section-title">Skill Matching Game</h2>
+      <h1 className="section-title">Skill Matching Game</h1>
       <div className="skill-game">
         {cards.map((card) => (
           <div

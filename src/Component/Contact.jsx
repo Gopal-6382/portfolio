@@ -95,8 +95,7 @@ const ContactForm = () => {
     <section id="section-6" className="contact-form-section">
       <div className="container">
         <div className="row px-5 mb-5">
-          <div className="col-12 contact  col-md-6 form">
-            <h2>Contact Me</h2>
+          <div className="col-12 contact mt-md-5 col-md-6 form">
             <form className="contact-form" onSubmit={handleSubmit}>
               <input
                 type="text"

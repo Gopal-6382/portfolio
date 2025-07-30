@@ -1,15 +1,15 @@
-import bus from '../Img/Bus.jpg';
-import bus2 from '../Img/Bus.webp';
-// import weather from './Img/Weather.jpg';
-// import java from './Img/Java.jpg';
-// import bootstrap from './Img/Bootstrap.jpg';
+import bus from '../Img/Bus.webp';
+import React1 from '../Img/React.jpg';
+import React2 from '../Img/React-2.webp';
+import java from '../Img/java.jpg';
+import Bootstrap from '../Img/bootstrap.webp';
 
 const imgProject = {
   bus,
-  bus2,
-  // weather,
-  // java,
-  // bootstrap,
+  React1,
+  React2,
+  java,
+  Bootstrap
 };
 
 export default imgProject;
