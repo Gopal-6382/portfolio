@@ -14,14 +14,8 @@ const CertificateSection = () => {
                 className="col-12 col-md-6 col-lg-4 col-xl-3 certificate"
               >
                 <div className="certificate-card">
-                  <div className="certificate-pdf-view">
-                    <a
-                      href={cert.pdf}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img src={cert.pdf} alt={cert.title} />
-                    </a>
+                  <div className="certificate-image">
+                    <img src={cert.image} alt={cert.title} />
                   </div>
                   <div className="certificate-body">
                     <h3>{cert.title}</h3>
