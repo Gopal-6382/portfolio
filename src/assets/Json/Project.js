@@ -1,9 +1,12 @@
-[
+import imgProject from "./img_project";
+
+
+const project = [
   {
     "id": "android-1",
     "title": "Bus Finder App (Android)",
     "description": "Java-based Android app with live bus tracking and GPS support.",
-    "image": "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+    "image": imgProject.bus2,
     "tags": ["Java", "Android", "Firebase"],
     "badge": "Mobile App",
     "backTitle": "Detailed Overview",
@@ -18,7 +21,7 @@
   },
   {
     "id": "react-1",
-    "title": "React CRUD & Mongo Integration",
+    "title": "React CRUD With AXIOS  & Small projects ",
     "description": "Basic CRUD operations with MongoDB connection.",
     "image": "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
     "tags": ["React", "CRUD", "MongoDB"],
@@ -34,7 +37,7 @@
   },
    {
     "id": "react-2",
-    "title": "React Weather &  And Components ",
+    "title": "React Weather & Advice & Currency & API & Hooks And other Components ",
     "description": "Weather and currency converter apps with real-time API integration.",
     "image": "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
     "tags": ["React", "API", "Hooks"],
@@ -83,3 +86,4 @@
     "git": "https://github.com/Gopal-6382/Gopal-6382/tree/bootstrap"
   }
 ]
+export default project;

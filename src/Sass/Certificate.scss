@@ -1,0 +1,35 @@
+.certificate-section {
+  padding: 2rem;
+
+  .certificate-card {
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: #fff;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .certificate-image img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .certificate-body {
+      padding: 1rem;
+
+      h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+        color: #555;
+      }
+    }
+  }
+}

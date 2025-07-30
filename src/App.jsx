@@ -6,6 +6,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Skills from "./Component/Skills";
 import ProjectSection from "./Component/Project";
 import ContactForm from "./Component/Contact";
+import CertificateSection from "./Component/Certificate";
 import {Footer} from "./Component/Footer";
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Hero2 />
       <Skills />
       <ProjectSection />
+      <CertificateSection />
       <ContactForm />
       <Footer/>
     </>

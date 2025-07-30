@@ -30,7 +30,7 @@ const socialLinks = [
 
 export const Footer = () => {
   return (
-    <footer className="section-6 beder">
+    <footer className="section-7 beder">
       <div className="container-fluid">
         <div className="row align-items-center">
           {/* Social Icons - Right on desktop, Bottom on mobile */}
