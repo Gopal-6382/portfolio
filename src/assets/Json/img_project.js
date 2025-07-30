@@ -1,8 +1,9 @@
-import bus from '../Img/Bus.webp';
-import React1 from '../Img/React.jpg';
-import React2 from '../Img/React-2.webp';
-import java from '../Img/java.jpg';
-import Bootstrap from '../Img/bootstrap.webp';
+import bus from '../img/Bus.webp';
+import React1 from '../img/React.jpg';
+import React2 from '../img/React-2.webp';
+import java from '../img/java.jpg';
+import Bootstrap from '../img/bootstrap.webp';
+
 
 const imgProject = {
   bus,

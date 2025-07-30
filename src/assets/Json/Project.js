@@ -1,4 +1,4 @@
-import imgProject from "./img_project";
+import imgProject from "../Json/img_project.js";
 
 const project = [
   {
