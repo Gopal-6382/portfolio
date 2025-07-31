@@ -85,7 +85,7 @@ export const ModalContent = ({ modalType, handleClose }) => {
                   <button className="modal-cta-secondary">
                     <a
                       className="modal-cta-link"
-                      href="../assets/Resume/resume.pdf"
+                      href="/public/Resume/resume.pdf"
                       download
                     >
                       Download Resume
@@ -143,18 +143,20 @@ export const ModalContent = ({ modalType, handleClose }) => {
             </div>
 
             <div className="modal-hire-cta">
-              <Button
-                variant="primary"
-                size="lg"
-                onClick={() => {
-                  handleClose();
-                  window.location.hash = "#contact";
-                }}
-                className="modal-hire-button"
-                href="#section-5"
-              >
-                Get in Touch
-              </Button>
+             <Button
+  variant="primary"
+  size="lg"
+  onClick={() => {
+    handleClose();
+    setTimeout(() => {
+      document.getElementById("section-6")?.scrollIntoView({ behavior: "smooth" });
+    }, 300); // delay to let modal animation finish
+  }}
+  className="modal-hire-button"
+>
+  Get in Touch
+</Button>
+
             </div>
           </Modal.Body>
         </>
@@ -207,7 +209,7 @@ export const ModalContent = ({ modalType, handleClose }) => {
               >
                 <a
                   className="modal-resume-link"
-                  href="../assets/Resume/resume.pdf"
+                  href="/public/Resume/resume.pdf"
                   download
                 >
                   Download Full Resume (PDF)
