@@ -1,16 +1,16 @@
 import bus from '../img/Bus.webp';
 import React1 from '../img/React.jpg';
 import React2 from '../img/React-2.webp';
-import java from '../img/java.jpg';
-import Bootstrap from '../img/bootstrap.webp';
+import Programming from '../img/Programming.webp';
+import Frontend from '../img/frontend.png';
 
 
 const imgProject = {
   bus,
   React1,
   React2,
-  java,
-  Bootstrap
+  Programming,
+  Frontend,
 };
 
 export default imgProject;
