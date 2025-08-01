@@ -1,118 +1,40 @@
-.skill-game {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-.skill-card {
-  perspective: 1000px;
-  cursor: pointer;
-  width: 120px;
-  height: 140px;
-  position: relative;
-
-  .card-inner {
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    position: absolute;
-  }
-
-  &.flipped .card-inner {
-    transform: rotateY(180deg);
-  }
-
-  .card-front,
-  .card-back {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    backface-visibility: hidden;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .card-front {
-    background-color: #f2f9aa;
-    border-radius: 50% 10% 50% 10% / 60% 40% 60% 40%;
-    border: 1px solid rgb(0, 0, 0);
-  }
-  /* Hide skill names below medium screens */
-  @media (max-width: 768px) {
-    .card-back .skill-name {
-      display: none;
-    }
-  }
-
-  .card-back {
-    background-color: #f6f9d4;
-    transform: rotateY(180deg);
-    flex-direction: column;
-
-    .skill-icon {
-      width: 40px;
-      height: 40px;
-      object-fit: contain;
-      border-radius: 50%;
-      margin-bottom: 0.5rem;
-    }
-
-    .skill-name {
-      font-size: 14px;
-      font-weight: bold;
-      text-align: center;
-      color: #333;
-      text-transform: capitalize;
-    }
-  }
-}
-
-/* Responsive: Tablets */
-@media (max-width: 768px) {
-  .skill-card {
-    width: 90px;
-    height: 110px;
-  }
-
-  .card-back .skill-icon {
-    width: 35px;
-    height: 35px;
-  }
-
-  .card-back .skill-name {
-    font-size: 12px;
-  }
-}
-
-/* Responsive: Mobile */
-@media (max-width: 480px) {
-  .skill-card {
-    width: 70px;
-    height: 90px;
-  }
-
-  .card-back .skill-icon {
-    width: 30px;
-    height: 30px;
-  }
-
-  .card-back .skill-name {
-    font-size: 11px;
-  }
-}
 .skill-section {
   padding: 4rem 1rem;
 
   .section-title {
-    text-align: center;
     font-size: 2rem;
+    color: sandybrown;
+    margin: 0;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center; // centers both horizontally
+    gap: 2rem;
+    flex-wrap: wrap;
     margin-bottom: 2rem;
-    color: #333;
+    text-align: center;
+
+    h1 {
+      line-height: 1;
+      margin: 0;
+    }
+
+    .flip-all-button {
+      background-color: #222;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      font-size: 1rem;
+
+      &:hover {
+        background-color: #444;
+      }
+    }
   }
 
   .skill-game {
@@ -120,11 +42,123 @@
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .skill-card {
+    perspective: 1000px;
+    cursor: pointer;
+    width: 120px;
+    height: 140px;
+    position: relative;
+
+    .card-inner {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      position: absolute;
+    }
+
+    &.flipped .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front,
+    .card-back {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      backface-visibility: hidden;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-front {
+      background-color: #f2f9aa;
+      border-radius: 50% 10% 50% 10% / 60% 40% 60% 40%;
+      border: 1px solid #000;
+    }
+
+    .card-back {
+      background-color: #f6f9d4;
+      transform: rotateY(180deg);
+      flex-direction: column;
+
+      .skill-icon {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+        border-radius: 50%;
+        margin-bottom: 0.5rem;
+      }
+
+      .skill-name {
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        color: #333;
+        text-transform: capitalize;
+      }
+    }
   }
 }
-#section-3 h1 {
-  text-align: center;
-  margin-bottom: 5%;
-  margin-top: 5%;
-  color: sandybrown;
+
+/* Responsive: Tablets */
+@media (max-width: 768px) {
+  .skill-section {
+    .skill-card {
+      width: 90px;
+      height: 110px;
+
+      .card-back {
+        .skill-icon {
+          width: 35px;
+          height: 35px;
+        }
+
+        .skill-name {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .header {
+      flex-direction: column;
+      gap: 1rem;
+
+      .flip-all-button {
+        width: auto;
+      }
+    }
+  }
+}
+
+/* Responsive: Mobile */
+@media (max-width: 480px) {
+  .skill-section {
+    .skill-card {
+      width: 70px;
+      height: 90px;
+
+      .card-back {
+        .skill-icon {
+          width: 30px;
+          height: 30px;
+        }
+
+        .skill-name {
+          font-size: 11px;
+        }
+      }
+    }
+
+    .header {
+      .section-title {
+        font-size: 1.5rem;
+      }
+    }
+  }
 }
