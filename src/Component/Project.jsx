@@ -49,7 +49,7 @@ const ProjectsSection = () => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="col-12 col-md-6 col-lg-4 col-xl-3 project"
+              className="col-12 col-md-6 col-lg-4 col-xl-4 project"
             >
               <div
                 className={`project-card ${initialLoad ? "animate-in" : ""} ${

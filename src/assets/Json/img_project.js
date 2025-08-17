@@ -3,6 +3,7 @@ import React1 from '../img/React.jpg';
 import React2 from '../img/React-2.webp';
 import Programming from '../img/Programming.webp';
 import Frontend from '../img/frontend.png';
+import Ecommerce from '../img/Ecommerce.png';
 
 
 const imgProject = {
@@ -11,6 +12,7 @@ const imgProject = {
   React2,
   Programming,
   Frontend,
+  Ecommerce
 };
 
 export default imgProject;

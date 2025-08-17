@@ -2,6 +2,32 @@ import imgProject from "./img_project.js";
 
 const project = [
   {
+    id: "E-commerce-1",
+    title: "Full-Stack E-commerce Website",
+    description:
+      "A modern MERN stack e-commerce platform with Tailwind CSS, featuring admin and user dashboards, product management, and responsive design.",
+    image: imgProject.Ecommerce,
+    tags: [
+      "MongoDB",
+      "Express",
+      "React",
+      "Node.js",
+      "Tailwind CSS",
+      "Admin Dashboard",
+      "User Visit Product",
+    ],
+    badge: "Web App",
+    backTitle: "Complete Online Shopping Experience",
+    backContent: [
+      "Developed a full-stack e-commerce website using MERN (MongoDB, Express, React, Node.js) with Tailwind CSS for responsive UI.",
+      "Implemented separate admin and user dashboards: admin can manage products, categories, orders, and users; users can browse, filter, and purchase products.",
+      "Features include secure authentication with JWT, dynamic product listings, cart management, and order tracking.",
+      "Designed with a mobile-first approach and optimized for performance and usability across devices.",
+    ],
+    git: "https://github.com/yourusername/ecommerce-mern",
+    link: "https://ecommerce-websiste.vercel.app/",
+  },
+  {
     id: "android-1",
     title: "Bus Finder App (Android)",
     description:
@@ -77,24 +103,23 @@ const project = [
     git: "https://github.com/Gopal-6382/Programming-Languages",
   },
 
- {
-  id: "web-frontend-lab",
-  title: "Frontend UI Component Lab",
-  description:
-    "A growing collection of frontend UI experiments with Bootstrap, Tailwind, Sass, CSS, and more.",
-  image: imgProject.Frontend, // Consider replacing with a more generic UI/HTML preview if available
-  tags: ["HTML", "CSS", "Bootstrap", "Tailwind", "Sass", "Three.js"],
-  badge: "Frontend",
-  backTitle: "Overview",
-  backContent: [
-    "Includes 30+ UI experiments with Bootstrap: buttons, modals, grids, cards, navbars, and more.",
-    "Future-ready with Tailwind CSS, Three.js, Sass, and custom vanilla CSS designs.",
-    "Ideal for layout prototyping, design system practice, and frontend architecture exploration.",
-    "Organized directory-wise for each library, with hands-on examples and comments.",
-    "Continually updated as a personal UI/UX learning sandbox.",
-  ],
-  git: "https://github.com/Gopal-6382/Web-Learnings",
-}
-
+  {
+    id: "web-frontend-lab",
+    title: "Frontend UI Component Lab",
+    description:
+      "A growing collection of frontend UI experiments with Bootstrap, Tailwind, Sass, CSS, and more.",
+    image: imgProject.Frontend, // Consider replacing with a more generic UI/HTML preview if available
+    tags: ["HTML", "CSS", "Bootstrap", "Tailwind", "Sass", "Three.js"],
+    badge: "Frontend",
+    backTitle: "Overview",
+    backContent: [
+      "Includes 30+ UI experiments with Bootstrap: buttons, modals, grids, cards, navbars, and more.",
+      "Future-ready with Tailwind CSS, Three.js, Sass, and custom vanilla CSS designs.",
+      "Ideal for layout prototyping, design system practice, and frontend architecture exploration.",
+      "Organized directory-wise for each library, with hands-on examples and comments.",
+      "Continually updated as a personal UI/UX learning sandbox.",
+    ],
+    git: "https://github.com/Gopal-6382/Web-Learnings",
+  },
 ];
 export default project;
