@@ -45,7 +45,6 @@ export const Hero2 = () => {
       className="tech-icon"
       width="40"
       height="40"
-      loading="lazy"
     />
   ))}
 </div>
