@@ -99,7 +99,7 @@ const ProjectsSection = () => {
                         window.open(project.git, "_blank");
                       }}
                     >
-                      Details
+                      Source Code
                     </button>
                   </div>
                 </div>

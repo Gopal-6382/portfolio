@@ -45,6 +45,33 @@ const project = [
     link: "https://github.com/Gopal-6382/Bus-Apk",
   },
   {
+    id: "MiniLinkedIn-1",
+    title: "MiniLinkedIn – Social Networking Website",
+    description:
+      "A React.js-based social networking platform with JWT authentication, user profiles, and post management.",
+    image: imgProject.Linkdne, // make sure to add an image in your imgProject object
+    tags: [
+      "React.js",
+      "React Router",
+      "Axios",
+      "Bootstrap",
+      "JWT Auth",
+      "LocalStorage",
+      "Community Platform",
+    ],
+    badge: "Web App",
+    backTitle: "Simplified LinkedIn Clone",
+    backContent: [
+      "Developed a community-based social app frontend using React.js with routing, state management, and API integration.",
+      "Implemented JWT-based authentication with login, registration, and token-based protected routes.",
+      "Users can create posts, edit their bio, and view other users’ profiles and activity.",
+      "Designed responsive UI with Bootstrap and managed API requests via Axios.",
+      "Ensured persistent login state using localStorage for token storage.",
+    ],
+    git: "https://github.com/Gopal-6382/linkden",
+    link: "https://linkden.vercel.app/",
+  },
+  {
     id: "react-1",
     title: "React Component Showcase",
     description:

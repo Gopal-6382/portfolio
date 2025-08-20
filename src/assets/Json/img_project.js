@@ -4,7 +4,7 @@ import React2 from '../img/React-2.webp';
 import Programming from '../img/Programming.webp';
 import Frontend from '../img/frontend.png';
 import Ecommerce from '../img/Ecommerce.png';
-
+import Linkdne from "../img/linkden.webp"
 
 const imgProject = {
   bus,
@@ -12,7 +12,8 @@ const imgProject = {
   React2,
   Programming,
   Frontend,
-  Ecommerce
+  Ecommerce,
+  Linkdne
 };
 
 export default imgProject;
