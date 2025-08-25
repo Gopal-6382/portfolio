@@ -28,6 +28,35 @@ const project = [
     link: "https://ecommerce-websiste.vercel.app/",
   },
   {
+    id: "LearningHub-1",
+    title: "LearningHub",
+    description:
+      "An interactive educational platform offering simulations, quizzes, and visual explorations on atomic structure, periodic table, and related chemistry concepts for Class 10 students.",
+    image: imgProject.Atom,
+    tags: [
+      "React",
+      "Tailwind CSS",
+      "Interactive Learning",
+      "Quizzes",
+      "Simulations",
+      "Educational Platform",
+    ],
+    badge: "EdTech",
+    backTitle: "Comprehensive Chemistry Learning Tool",
+    backContent: [
+      "Designed an immersive educational module for Class 10 students to explore atomic structure, the periodic table, ions, isotopes, and electron configuration.",
+      "Implemented a Learning Path feature with locked/unlocked topics, progress tracking, and a sidebar listing core modules.",
+      "Built an Interactive Atom Builder enabling students to construct neutral atoms, ions, and isotopes with real-time visualization of atomic number, mass, and charge.",
+      "Created an Element Explorer offering detailed element data: symbol, atomic number, mass, electron configuration, electronegativity, and interesting trivia.",
+      "Designed an interactive, color-coded Periodic Table with sorting and toggle views (table vs list).",
+      "Developed adaptive quizzes and assessments per topic, featuring immediate feedback, score tracking, and dynamic progression.",
+      "Included advanced interactive tools like a random atom generator and sliders for protons, neutrons, and electrons.",
+      "Built using modern front-end tech (React, Tailwind CSS) with custom hooks for managing simulation and quiz states; fully responsive across devices.",
+    ],
+    git: "https://github.com/Gopal-6382/LearningHub",
+    link: "https://learning-hub-rouge.vercel.app/",
+  },
+  {
     id: "android-1",
     title: "Bus Finder App (Android)",
     description:
@@ -49,7 +78,7 @@ const project = [
     title: "MiniLinkedIn – Social Networking Website",
     description:
       "A React.js-based social networking platform with JWT authentication, user profiles, and post management.",
-    image: imgProject.Linkdne, // make sure to add an image in your imgProject object
+    image: imgProject.Linkden,
     tags: [
       "React.js",
       "React Router",
@@ -70,6 +99,34 @@ const project = [
     ],
     git: "https://github.com/Gopal-6382/linkden",
     link: "https://linkden.vercel.app/",
+  },
+
+  {
+    id: "StoryBook",
+    title: "React Storybook",
+    description:
+      "A project showcasing reusable React components (InputField and DataTable) built with TypeScript, Tailwind CSS, and documented with Storybook.",
+    image: imgProject.StoryBook,
+    tags: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Storybook",
+      "Vitest",
+      "Reusable Components",
+    ],
+    badge: "Frontend",
+    backTitle: "Reusable UI Component Library",
+    backContent: [
+      "Developed two core reusable React components: InputField and DataTable with TypeScript for type safety.",
+      "InputField supports validation states, sizes, variants, helper text, error messages, and password toggle functionality.",
+      "DataTable provides tabular data display with column sorting, single/multiple row selection, loading, and empty states.",
+      "Fully integrated Storybook for component documentation, showcasing props, states, and variants in isolation.",
+      "Built using modern tooling: React, Vite, Tailwind CSS, and tested with Vitest for reliability.",
+    ],
+    git: "https://github.com/Gopal-6382/Story_Book",
+    link: "https://storybook-static-i40duokyx-gopal-krishnan.vercel.app/?path=/story/components-datatable--default",
   },
   {
     id: "react-1",
