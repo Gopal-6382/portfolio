@@ -8,6 +8,7 @@ import PudgyWork from "../assets/Contact/Pudgy work (1)";
 const ContactForm = () => {
   const lottieRef = useRef();
   const typingTimeout = useRef(null);
+  const [isTyping, setIsTyping] = useState(false);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -36,22 +37,21 @@ const ContactForm = () => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
 
-    // Play short animation segment when typing
+    // Start playing when typing
+    setIsTyping(true);
     if (lottieRef.current) {
-      lottieRef.current.playSegments([0, 30], true);
+      lottieRef.current.play();
     }
 
-    // Reset the typing timeout
+    // Reset typing timeout
     if (typingTimeout.current) clearTimeout(typingTimeout.current);
 
     typingTimeout.current = setTimeout(() => {
-      // Stop on a visible frame with no flicker
+      setIsTyping(false); // stop looping
       if (lottieRef.current) {
-        requestAnimationFrame(() => {
-          lottieRef.current.goToAndStop(10, true);
-        });
+        lottieRef.current.pause(); // freeze on last frame
       }
-    }, 1000); // Stop 1s after typing stops
+    }, 1000);
   };
 
   const validateForm = () => {
@@ -157,7 +157,7 @@ const ContactForm = () => {
                 lottieRef={lottieRef}
                 animationData={PudgyWork}
                 autoplay={false}
-                loop={false}
+                loop={isTyping} // 👈 dynamically loop while typing
                 style={{ width: "100%", height: "100%" }}
               />
             </div>
