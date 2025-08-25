@@ -6,7 +6,7 @@ import Frontend from '../img/frontend.png';
 import Ecommerce from '../img/Ecommerce.png';
 import Linkden from "../img/linkden.webp"
 import StoryBook from "../img/Storybook.png"
-import Atom from "../Img/atom.png"
+import Atom from "../img/atom.png"
 const imgProject = {
   bus,
   React1,
