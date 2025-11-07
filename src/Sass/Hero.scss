@@ -238,10 +238,11 @@ $clr--1: #1d9ee8;
   }
 }
 .modal-footer {
-  .btn{
+  .btn {
     border-radius: 50px;
   }
-}.about-me-container {
+}
+.about-me-container {
   animation: fadeInUp 0.5s ease-out;
 }
 
@@ -255,7 +256,6 @@ $clr--1: #1d9ee8;
     transform: translateY(0);
   }
 }
-
 
 // src/Sass/Modal.scss
 .modal-title-icon {
@@ -282,7 +282,7 @@ $clr--1: #1d9ee8;
   background: linear-gradient(95deg, #f6f9d4 0%, #f0f4ff 100%);
   padding: 2.5rem;
   text-align: center;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .modal-avatar {
@@ -292,7 +292,7 @@ $clr--1: #1d9ee8;
   background: white;
   margin: 0 auto 1.5rem;
   border: 3px solid white;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   position: relative;
 }
@@ -336,8 +336,8 @@ $clr--1: #1d9ee8;
   background-color: white;
   border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .modal-highlight-title {
@@ -364,7 +364,7 @@ $clr--1: #1d9ee8;
   background: #f8f9fa;
   padding: 2rem;
   text-align: center;
-  border-top: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .modal-cta-text {

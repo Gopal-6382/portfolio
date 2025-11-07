@@ -1,7 +1,7 @@
 import imgs from "../Json/certificate-img.js";
 
 const certificates = [
-    {
+  {
     id: 7,
     title: "React Certificate",
     description: "Great Stack ",
@@ -43,7 +43,6 @@ const certificates = [
     description: "ArulMigu Palani Andavar Of Arts and Science Culture",
     image: imgs.img1,
   },
-
 ];
 
 export default certificates;

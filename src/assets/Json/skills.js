@@ -1,4 +1,4 @@
-const iconFiles = import.meta.glob('../assets/Icons/*.svg', { eager: true });
+const iconFiles = import.meta.glob("../assets/Icons/*.svg", { eager: true });
 
 const iconNames = [
   "aiscript-light",

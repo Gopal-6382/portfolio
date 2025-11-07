@@ -7,8 +7,8 @@ import Skills from "./Component/Skills";
 import ProjectSection from "./Component/Project";
 import ContactForm from "./Component/Contact";
 import CertificateSection from "./Component/Certificate";
-import {Footer} from "./Component/Footer";
-import { Analytics } from "@vercel/analytics/react"
+import { Footer } from "./Component/Footer";
+import { Analytics } from "@vercel/analytics/react";
 const App = () => {
   return (
     <>

@@ -19,7 +19,7 @@ export const TypewriterEffect = ({
       if (displayedText.length < text[currentIndex].length) {
         timeout = setTimeout(() => {
           setDisplayedText(
-            text[currentIndex].substring(0, displayedText.length + 1)
+            text[currentIndex].substring(0, displayedText.length + 1),
           );
         }, typingSpeed);
       } else {
@@ -29,7 +29,7 @@ export const TypewriterEffect = ({
       if (displayedText.length > 0) {
         timeout = setTimeout(() => {
           setDisplayedText(
-            text[currentIndex].substring(0, displayedText.length - 1)
+            text[currentIndex].substring(0, displayedText.length - 1),
           );
         }, eraseSpeed);
       } else {

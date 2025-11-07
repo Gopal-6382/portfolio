@@ -4,11 +4,30 @@ import "../Sass/skill.scss";
 const iconFiles = import.meta.glob("../assets/Icons/*.svg", { eager: true });
 
 const iconNames = [
-  "aiscript-light", "androidstudio-dark", "bootstrap", "c", "cpp", "css",
-  "expressjs-dark", "figma-dark", "github-dark", "gradle-dark", "html",
-  "idea-dark", "java-dark", "mongodb", "mysql-dark", "linux-dark",
-  "nodejs-dark", "react-dark", "sass", "sqlite", "stackoverflow-dark",
-  "vite-dark", "vscode-dark", "windows-light"
+  "aiscript-light",
+  "androidstudio-dark",
+  "bootstrap",
+  "c",
+  "cpp",
+  "css",
+  "expressjs-dark",
+  "figma-dark",
+  "github-dark",
+  "gradle-dark",
+  "html",
+  "idea-dark",
+  "java-dark",
+  "mongodb",
+  "mysql-dark",
+  "linux-dark",
+  "nodejs-dark",
+  "react-dark",
+  "sass",
+  "sqlite",
+  "stackoverflow-dark",
+  "vite-dark",
+  "vscode-dark",
+  "windows-light",
 ];
 
 const skills = iconNames.map((name) => {
@@ -17,7 +36,11 @@ const skills = iconNames.map((name) => {
   const icon = iconFiles[path]?.default ?? null;
 
   return {
-    name: name.replace(/-/g, " ").replace(/(dark|light)/gi, "").trim().toUpperCase(),
+    name: name
+      .replace(/-/g, " ")
+      .replace(/(dark|light)/gi, "")
+      .trim()
+      .toUpperCase(),
     icon,
   };
 });
@@ -27,10 +50,12 @@ const SkillGame = () => {
   const [matched, setMatched] = useState([]);
   const [showAllSkills, setShowAllSkills] = useState(false);
 
-  const cards = (showAllSkills ? skills : [...skills, ...skills]).map((skill, index) => ({
-    ...skill,
-    id: index,
-  }));
+  const cards = (showAllSkills ? skills : [...skills, ...skills]).map(
+    (skill, index) => ({
+      ...skill,
+      id: index,
+    }),
+  );
 
   const handleFlip = (id) => {
     if (showAllSkills) return;
@@ -72,7 +97,9 @@ const SkillGame = () => {
           <div
             key={card.id}
             className={`skill-card ${
-              flipped.includes(card.id) || matched.includes(card.id) || showAllSkills
+              flipped.includes(card.id) ||
+              matched.includes(card.id) ||
+              showAllSkills
                 ? "flipped"
                 : ""
             }`}

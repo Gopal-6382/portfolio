@@ -23,7 +23,7 @@
   background: linear-gradient(95deg, #f6f9d4 0%, #f0f4ff 100%);
   padding: 2.5rem;
   text-align: center;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .modal-avatar {
@@ -33,7 +33,7 @@
   background: white;
   margin: 0 auto 1.5rem;
   border: 3px solid white;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   position: relative;
 }
@@ -77,8 +77,8 @@
   background-color: white;
   border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .modal-highlight-title {
@@ -105,7 +105,7 @@
   background: #f8f9fa;
   padding: 2rem;
   text-align: center;
-  border-top: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .modal-cta-text {
@@ -139,7 +139,7 @@
   color: #0066cc;
   border: 1px solid #0066cc;
   padding: 0.75rem 2rem;
-   border-radius: 50px !important;
+  border-radius: 50px !important;
 
   font-weight: 600;
   cursor: pointer;
@@ -166,7 +166,6 @@
   padding: 0.75rem 2rem;
   font-weight: 600;
   border-radius: 50px !important;
-
 }
 
 .modal-resume-grid {
@@ -190,14 +189,12 @@
   padding: 0.75rem 2rem;
   font-weight: 600;
   border-radius: 50px !important;
-
 }
 
 .modal-resume-link {
   text-decoration: none;
   color: white;
 }
-
 
 // .modal-about-container{
 //   // .developer-pillar{

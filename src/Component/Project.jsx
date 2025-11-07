@@ -37,13 +37,13 @@ const ProjectsSection = () => {
     setFlippedCards((prev) =>
       prev.includes(projectId)
         ? prev.filter((id) => id !== projectId)
-        : [...prev, projectId]
+        : [...prev, projectId],
     );
   };
 
   return (
     <section id="section-4" className="projects-section" ref={containerRef}>
-      <h1 className="Project-heading" > Projects</h1>
+      <h1 className="Project-heading"> Projects</h1>
       <div className="container-fluid">
         <div className="row gy-4">
           {projects.map((project) => (

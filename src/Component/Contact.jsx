@@ -74,7 +74,7 @@ const ContactForm = () => {
         "service_ztswfqa",
         "template_q9ipjx6",
         formData,
-        "0uDhO8yjZ3SXmnRsm"
+        "0uDhO8yjZ3SXmnRsm",
       );
 
       setStatus("success");

@@ -164,67 +164,68 @@ export const ModalContent = ({ modalType, handleClose }) => {
       );
 
     case "resume":
-  return (
-    <>
-      <Modal.Header closeButton style={modalStyle}>
-        <Modal.Title className="modal-title">
-          My Professional Journey
-        </Modal.Title>
-      </Modal.Header>
-      <Modal.Body style={{ ...modalStyle, padding: "2rem" }}>
-        <div className="modal-resume-grid">
-          <div>
-            <h3 className="modal-resume-section-title">Education</h3>
-            <TimelineItem
-              year="2022-2025"
-              title="Bachelor of Computer Application"
-              description="Specialized in Web Development"
-            />
-          </div>
+      return (
+        <>
+          <Modal.Header closeButton style={modalStyle}>
+            <Modal.Title className="modal-title">
+              My Professional Journey
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body style={{ ...modalStyle, padding: "2rem" }}>
+            <div className="modal-resume-grid">
+              <div>
+                <h3 className="modal-resume-section-title">Education</h3>
+                <TimelineItem
+                  year="2022-2025"
+                  title="Bachelor of Computer Application"
+                  description="Specialized in Web Development"
+                />
+              </div>
 
-          <div>
-            <h3 className="modal-resume-section-title">Career Highlights</h3>
-            <TimelineItem
-              year="2023"
-              title="Tutor"
-              description="Working in the tutorial center"
-            />
-          </div>
+              <div>
+                <h3 className="modal-resume-section-title">
+                  Career Highlights
+                </h3>
+                <TimelineItem
+                  year="2023"
+                  title="Tutor"
+                  description="Working in the tutorial center"
+                />
+              </div>
 
-          <div>
-            <h3 className="modal-resume-section-title">Projects</h3>
-            <TimelineItem
-              year="2024"
-              title="Bus Finder App"
-              description="Built the Bus Finder app in Android Studio for Tamil Nadu public transport."
-            />
-            <TimelineItem
-              year="2025"
-              title="Full-Stack E-commerce Website"
-              description="Developed a MERN stack e-commerce website with Tailwind CSS, featuring admin/user dashboards, secure authentication, and dynamic product management."
-            />
-          </div>
-        </div>
+              <div>
+                <h3 className="modal-resume-section-title">Projects</h3>
+                <TimelineItem
+                  year="2024"
+                  title="Bus Finder App"
+                  description="Built the Bus Finder app in Android Studio for Tamil Nadu public transport."
+                />
+                <TimelineItem
+                  year="2025"
+                  title="Full-Stack E-commerce Website"
+                  description="Developed a MERN stack e-commerce website with Tailwind CSS, featuring admin/user dashboards, secure authentication, and dynamic product management."
+                />
+              </div>
+            </div>
 
-        <div className="modal-resume-cta">
-          <Button
-            variant="success"
-            size="lg"
-            className="modal-resume-button"
-          >
-            <a
-              className="modal-resume-link"
-              href="/Resume/resume.pdf"
-              download
-            >
-              Download Full Resume (PDF)
-            </a>
-          </Button>
-        </div>
-      </Modal.Body>
-    </>
-  );
-
+            <div className="modal-resume-cta">
+              <Button
+                variant="success"
+                size="lg"
+                className="modal-resume-button"
+              >
+                <a
+                  className="modal-resume-link"
+                  href="/Resume/resume.pdf"
+                  download
+                >
+                  Download Full Resume (PDF)
+                </a>
+              </Button>
+            </div>
+          </Modal.Body>
+        </>
+      );
 
     default:
       return null;

@@ -27,15 +27,15 @@ export const Navbar = () => {
     // Only scroll if not already at this section
     const { top } = element.getBoundingClientRect();
     if (Math.abs(top) > 10) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   }, []);
 
   // Handle hash changes from URL or navigation
   const handleHashChange = useCallback(() => {
     const hash = window.location.hash.substring(1);
-    const isValidSection = navItems.some(item => item.href === `#${hash}`);
-    
+    const isValidSection = navItems.some((item) => item.href === `#${hash}`);
+
     if (isValidSection && hash !== activeSection) {
       setActiveSection(hash);
       scrollToSection(hash);
@@ -52,7 +52,7 @@ export const Navbar = () => {
     handleHashChange();
 
     // Set up hashchange listener
-    window.addEventListener('hashchange', handleHashChange);
+    window.addEventListener("hashchange", handleHashChange);
 
     // Scroll handler for hiding navbar and detecting active section
     let lastScrollY = window.scrollY;
@@ -70,7 +70,7 @@ export const Navbar = () => {
       // Detect active section with debounce
       scrollTimeout = setTimeout(() => {
         let newActiveSection = "section-1";
-        document.querySelectorAll("section[id]").forEach(section => {
+        document.querySelectorAll("section[id]").forEach((section) => {
           const { top, height } = section.getBoundingClientRect();
           if (top <= 100 && top + height > 100) {
             newActiveSection = section.id;
@@ -78,7 +78,10 @@ export const Navbar = () => {
         });
 
         // Only update if different from current and not recently clicked
-        if (newActiveSection !== activeSection && newActiveSection !== lastClickedSection) {
+        if (
+          newActiveSection !== activeSection &&
+          newActiveSection !== lastClickedSection
+        ) {
           setActiveSection(newActiveSection);
           window.history.replaceState(null, "", `#${newActiveSection}`);
         }
@@ -86,17 +89,17 @@ export const Navbar = () => {
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener('hashchange', handleHashChange);
+      window.removeEventListener("hashchange", handleHashChange);
       clearTimeout(scrollTimeout);
     };
   }, [activeSection, handleHashChange, lastClickedSection]);
 
   const handleNavClick = (sectionId, e) => {
     e.preventDefault();
-    
+
     // Don't do anything if clicking the currently active section
     if (sectionId === activeSection) return;
 
@@ -111,7 +114,10 @@ export const Navbar = () => {
   };
 
   return (
-    <div id="section-1" className={`section-1 ${hideNavbar ? "hide-on-scroll" : ""}`}>
+    <div
+      id="section-1"
+      className={`section-1 ${hideNavbar ? "hide-on-scroll" : ""}`}
+    >
       <div className="fixed-top mt-4 px-3 px-md-4">
         <div className="container">
           <nav className="navbar navbar-expand-md bg-black bg-opacity-75 rounded-5 px-3">
@@ -129,7 +135,9 @@ export const Navbar = () => {
                 </span>
               </button>
 
-              <div className={`collapse navbar-collapse custom-collapse ${menuOpen ? "show" : ""}`}>
+              <div
+                className={`collapse navbar-collapse custom-collapse ${menuOpen ? "show" : ""}`}
+              >
                 <ul className="navbar-nav justify-content-between align-items-center w-100 fade-in-list">
                   {navItems.map((item) => (
                     <li
@@ -137,7 +145,9 @@ export const Navbar = () => {
                       className={`nav-item fade-in-item ${activeSection === item.href.substring(1) ? "active" : ""}`}
                     >
                       <a
-                        onClick={(e) => handleNavClick(item.href.substring(1), e)}
+                        onClick={(e) =>
+                          handleNavClick(item.href.substring(1), e)
+                        }
                         className="nav-link"
                         href={item.href}
                       >
